@@ -1,0 +1,7 @@
+<td><%= user.name %></td>
+<td><%= user.email %></td>
+<td><%= l user.created_at, format: :long %></td>
+<td class="options">
+	<%= link_to raw(t("main.buttons.edit")), edit_admin_user_path(user), class: 'btn btn-xs btn-default' %>
+	<%= link_to raw(t("main.buttons.destroy")), admin_user_path(user), format: :delete, remote: true, confirm: "¿Está seguro de eliminar este usuario? (no se podrán recuperar los datos eliminados)", class: 'btn btn-xs btn-danger' %>
+</td>

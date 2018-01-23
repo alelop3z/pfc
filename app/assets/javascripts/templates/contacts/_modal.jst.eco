@@ -1,0 +1,19 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>"><span aria-hidden="true">&times;</span></button>
+        <h2><%= I18n.t("contacts.new.title") %></h2>
+        <p><%= I18n.t("contacts.new.explication") %></p>
+        <form action="/contacts/send" data-link-to="#contacts#send" class="form-inline row" method="post">
+          <div class="col-xs-9">
+            <input type="text" class="form-control" id="url" name="url" placeholder="<%= I18n.t("routes.new.import_url.text_field") %>">
+          </div>
+          <button type="submit" class="btn btn-success">
+            <%= I18n.t("contacts.new.button") %>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+es:
+  routes:
+    comment:
+      created: Ha creado la ruta %{name}
+      sharing: Ha compartido la ruta %{name}
+    destroy:
+      are_you_sure?: ¿Está seguro de eliminar esta ruta? (no se podrá recuperar)
+      button: Eliminar
+      explication: Se va a proceder a eliminar del sistema la ruta seleccionada. Tenga en cuenta que no se podrá recuperar la información asociada a la ruta ni acceder al detalle de la misma.
+      explication_error: Se ha producido un error a la hora de eliminar la ruta seleccionada. Vuelva a intentarlo o contacte con el servicio técnico.
+      title: Eliminar ruta %{name}
+    edit:
+      edit_message: Modifica los datos de tu ruta
+      title: Editar ruta
+    enter_location: Introduce localización
+    errors: 
+      url_blank: introducida no puede ser nula
+      url_incorrect: introducida no es correcta. Si persiste el error contacte con nuestro equipo de soporte para solucionarlo.
+    fields:
+      allow_comments: Permitir comentarios
+      description: Descripción
+      difficulty: Dificultad
+      name: Nombre de la ruta
+      private: Ruta privada
+      ready: ¿Visible?
+      route_type: Tipo de ruta
+    index:
+      message: Todas las rutas que han subido nuestros usuarios
+      new: Nueva ruta
+      title: Listado de rutas
+    new:
+      draw_hand_link: Dibuja tu ruta a mano
+      explication: Puedes subir una ruta a partir de una URL de una web con la que trabajemos o subir una ruta de manera manual. ¡Tú eliges!
+      file:
+        button: Añade tu ruta
+        explication: Sube una ruta a partir de un fichero GPX y comparte tu ruta con tus seguidores
+        title: ¡Ya queda menos para crear tu ruta!
+      import_link: Importa desde una URL
+      import_url:
+        button: Importar
+        explication: <p>En la actualidad disponemos de un integrador con las páginas web WikiLoc (<a href=http://www.wikiloc.com rel=external>Ir a WikiLoc</a>) y Cicloide (<a href=http://www.cicloide.com rel=external>Ir a Cicloide</a>)</p>
+        text_field: Pega una URL como "http://es.wikiloc.com/wikiloc/view.do?id=4350383"
+        title: ¡Más fácil imposible! Publica tu ruta con un solo clic.
+      title: Nueva ruta
+    show:
+      add_favorite: Añadir favorito
+      difficulty: Dificultad
+      distance: Distancia
+      download:
+        icon: <i class="glyphicon glyphicon-download-alt"></i>
+        title: Descargar
+      duration: Duración
+      edit: Editar ruta
+      route_type: Tipo de ruta
+      title: Ruta %{name}

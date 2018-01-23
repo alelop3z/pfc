@@ -1,0 +1,11 @@
+es:
+  mongoid:
+    models:
+      comment: comentario
+    attributes:
+      comment:
+        created_at: Fecha de creación
+        participant_ids: Participantes
+        text: Comentario
+        user: Usuario
+        user_id: Usuario

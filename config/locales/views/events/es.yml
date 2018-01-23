@@ -1,0 +1,59 @@
+es:
+  events:
+    address: 
+      presence: <p>Escribe la dirección donde se celebrará el evento</p>
+    comment:
+      created: Ha creado el evento %{name}
+      sharing: Ha compartido el evento %{name}
+    description:
+      presence: <p>Añade una descripción del evento para que el resto de usuarios sepan más de él</p>
+    destroy:
+      are_you_sure?: ¿Está seguro de eliminar este evento? (no se podrá recuperar)
+      button: Eliminar
+      explication: Se va a proceder a eliminar del sistema el evento seleccionado. Tenga en cuenta que no se podrá recuperar la información asociada al evento ni acceder al detalle del mismo.
+      explication_error: Se ha producido un error a la hora de eliminar el evento seleccionado. Vuelva a intentarlo o contacte con el servicio técnico.
+      title: Eliminar evento %{name}
+    edit:
+      edit_message: Modifica los datos de tu evento
+      title: Editar evento
+    enter_location: Introduce localización
+    event_type:
+      presence: <p>Indica el tipo de evento que mejor encaje</p>
+    fields:
+      address: Dirección
+      allow_comments: Permitir comentarios
+      description: Descripción
+      difficulty: Dificultad
+      event_type: Tipo de evento
+      init_date: Fecha
+      name: Nombre del evento
+      private: Evento privado
+      ready: ¿Visible?
+      summary: Resumen
+      url: URL del evento
+    index:
+      message: Todos las eventos que han subido nuestros usuarios
+      new: Nuevo evento
+      title: Listado de eventos
+    init_date:
+      presence: <p>¿En que fecha se celebra el evento?</p>
+      invalid_date: <p>Introduce una fecha válida</p>
+    location:
+      presence: <p>Necesitamos que añadas una localización asociada al evento</p>
+    name:
+      presence: <p>El nombre del evento no puede ser vacío</p>
+    new:
+      title: Nuevo evento
+    show:
+      add_favorite: Añadir favorito
+      address: Dirección
+      difficulty: Dificultad
+      distance: Distancia
+      download:
+        icon: <i class="glyphicon glyphicon-download-alt"></i>
+        title: Descargar
+      duration: Duración
+      edit: Editar evento
+      event_type: Tipo de evento
+      locale_init_date: Fecha del evento
+      title: Evento %{name}

@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="module col-md-12">
+        <div class="content-header">
+          <div class="header-inner">
+            <h2><%= I18n.t("routes.edit.title") %></h2>
+            <p class="subheader"><%= I18n.t("routes.edit.edit_message") %></p>
+          </div>
+        </div>
+        <div class="content">
+          <form name="edit-route" action="/routes/<%= @route.id_to_s %>" data-id="<%= @route.id_to_s %>" data-link-to="#routes#update" method="put">
+            <%= @safe render_partial("routes/form", route: @route) %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

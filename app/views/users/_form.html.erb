@@ -1,0 +1,62 @@
+<div class="row">
+  <%= form_for(@user, :url => {:controller => :users, :action => :update, :id => @user}, :html => {:method => :put, :multipart => true, :class => "form-horizontal"}) do |f| %>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="user_name"><%= t("user.name") %>: </label>
+            <div class="controls">
+              <%= f.text_field :name, :class => "form-control", :placeholder => t("users.placeholder..name") %>
+              <span class="help-block"><%= t("users.help.name") %></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-offset-1">
+          <div class="form-group">
+            <label for="user_email"><%= t("user.email") %>: </label>
+            <div class="controls">
+              <%= f.email_field :email, :class => "form-control", :placeholder => t("users.placeholder.email") %>
+              <span class="help-block"><%= t("users.help.email") %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="user_avatar"><%= t("user.avatar") %>: </label>
+            <%= f.file_field :avatar, :class => "form-control" %>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-md-offset-1">
+          <div class="form-group">
+            <label for="user_web_page"><%= t("user.web_page") %>: </label>
+            <div class="controls">
+              <%= f.text_field :web_page, :class => "form-control", :placeholder => t("users.placeholder.web_page") %>
+              <span class="help-block"><%= t("users.help.web_page") %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="user_about_me"><%= t("user.about_me") %>: </label>
+        <%= f.text_area :about_me, :class => "form-control", :rows => 4, :placeholder => t("users.placeholder..about_me") %>
+        <span class="help-block"><%= t("users.help.about_me") %></span>
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <div class="pull-right margin-bottom">
+        <%= f.submit t("users.update"), :class => "btn btn-warning", :id => "submit-update", :title => t("users.update") %>
+      </div>
+    </div>
+  <% end %>
+</div>

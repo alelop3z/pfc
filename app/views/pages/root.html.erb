@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="container">
+        <div id="message-veb" class="module col-md-4">
+            <%= render :partial => "comunes/logo_big_black" %>
+        
+            <div id="sign-in">
+                <%= render :partial => "users/login" %>
+
+                <hr />
+                <center>
+                    <p>¿No tienes una cuenta?</p>
+                    <p><%= link_to "Regístrate", new_user_registration_path, :remote => true, :class => "sign-up-link" %></p>
+                </center>
+            </div>
+
+            <div id="sign-up" style="display:none;"></div>
+        </div>
+    </div>
+</div>

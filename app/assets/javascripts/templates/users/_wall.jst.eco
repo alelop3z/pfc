@@ -1,0 +1,16 @@
+<% if @current.id_to_s != @user.id_to_s: %>
+  <%= @safe render_partial("users/user_detail", {current: @current, user: @user}) %>
+  <%= @safe render_partial("users/add_comment", {current: @current, user: @user}) %>
+<% else: %>
+  <%= @safe render_partial("users/add_comment", {current: @current, user: @user}) %>
+<% end %>
+
+<div class="module">
+  <div id="comments" data-timestamp>
+    <% for comment in @comments: %>
+      <%= @safe render_partial("users/comment", {comment: comment, current: @current}) %>
+    <% end %>
+  </div>
+</div>
+
+<div id="loading" class="acenter csspinner traditional" style="display:none;" data-controller="users" data-action="update_wall" data-id="<%= @user.id_to_s %>"></div>

@@ -1,0 +1,3 @@
+<% for comment in @comments: %>
+  <%= @safe render_partial("users/comment", {comment: comment}) %>
+<% end %>

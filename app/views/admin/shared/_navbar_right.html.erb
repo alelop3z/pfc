@@ -1,0 +1,21 @@
+<ul class="nav navbar-top-links navbar-right">
+    <!-- /.dropdown -->
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-user">
+            <li>
+                <%= link_to raw("<i class=\"fa fa-user fa-fw\"></i> Perfil"), edit_user_registration_path(current_user), title: "Perfil de usuario" %>
+            </li>
+            <li>
+                <%= link_to raw("<i class=\"fa fa-config fa-fw\"></i> Configuración"), admin_configurations_path, title: "Configuración" %>
+            </li>
+            <li class="divider"></li>
+            <li><%= link_to raw("<i class=\"fa fa-sign-out fa-fw\"></i> Cerrar sesión"), destroy_user_session_path, title: "Cerrar sesión", method: :delete %>
+            </li>
+        </ul>
+        <!-- /.dropdown-user -->
+    </li>
+    <!-- /.dropdown -->
+</ul>

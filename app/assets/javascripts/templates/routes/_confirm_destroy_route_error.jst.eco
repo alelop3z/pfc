@@ -1,0 +1,10 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12">
+        <h2><%= I18n.t("routes.destroy.title", name: @route.name) %></h2>
+        <p><%= I18n.t("routes.destroy.explication_error") %></p>
+      </div>
+    </div>
+  </div>
+</div>

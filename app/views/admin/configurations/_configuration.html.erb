@@ -1,0 +1,6 @@
+<td><%= configuration.key %></td>
+<td><%= configuration.value %></td>
+<td class="options">
+	<%= link_to raw(t("main.buttons.edit")), edit_admin_configuration_path(configuration), class: "btn btn-default btn-xs" %>
+	<%= link_to raw(t("main.buttons.destroy")), admin_configuration_path(configuration), method: :delete, remote: true, confirm: "¿Está seguro de eliminar esta configuración? (no se podrán recuperar los datos eliminados)", class: "btn btn-danger btn-xs" %>
+</td>

@@ -1,0 +1,17 @@
+<h4 class="page-header">Nueva ruta</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Crear ruta
+    </div>
+    <div class="panel-body">
+    	<%= form_tag admin_routes_path(@route), method: 'post' do |f| %>
+    		<%= render :partial => "shared/error_messages", :locals => {:target => @route} %>
+
+    		<%= render 'admin/routes/form' %>
+    	<% end %>
+    </div>
+	<div class="panel-footer">
+		<%= link_to raw(t("helpers.back")), admin_routes_path, title: 'Volver al listado de rutas' %>
+	</div>
+</div>

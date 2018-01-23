@@ -1,0 +1,50 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12 import-url">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>"><span aria-hidden="true">&times;</span></button>
+        <h2><%= I18n.t("routes.new.title") %></h2>
+        
+        <div class="row route-select">
+          <div class="col-xs-12">
+            <p><%= I18n.t("routes.new.explication") %></p>
+          </div>
+
+          <div class="col-md-6">
+            <img src="/assets/comunes/ruta-importada.png" />
+
+            <a href="/routes/new" data-link-to="#routes#new_import" class="btn btn-success">
+              <%= I18n.t("routes.new.import_link") %>
+            </a>
+          </div>
+
+          <div class="col-md-6 hidden-xs">
+            <img src="/assets/comunes/ruta-manual.png" />
+
+            <a href="/routes/new" data-link-to="#routes#new" class="btn btn-success">
+              <%= I18n.t("routes.new.draw_hand_link") %>
+            </a>
+          </div>
+        </div>
+
+        <div class="route-import hidden">
+          <form action="/routes/import" data-link-to="#routes#import" class="form-inline row" method="post">
+            <div class="col-xs-12 margin-bottom">
+              <%= @safe I18n.t("routes.new.import_url.explication") %>
+            </div>
+
+            <div class="col-md-10 col-xs-12 margin-bottom">
+              <input type="text" class="form-control" id="url" name="url" placeholder="<%= I18n.t("routes.new.import_url.text_field") %>">
+            </div>
+
+            <div class="col-md-2 col-xs-12">
+              <button type="submit" class="btn btn-success pull-right">
+                <%= I18n.t("routes.new.import_url.button") %>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

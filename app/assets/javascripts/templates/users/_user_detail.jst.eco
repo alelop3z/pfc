@@ -1,0 +1,38 @@
+<div class="module profile-card object-info">
+  <div class="object-info-top">
+    <img src="<%= @user.photo %>" alt="<%= @user.name %>" />
+    <h1><%= @user.name %></h1>
+  </div>
+  <div class="object-info-bottom">
+    <div class="col-sm-7">
+      <table>
+        <tbody>
+          <tr>
+            <th><%= I18n.t("users.profile.tweets") %></th>
+            <th><%= I18n.t("users.profile.routes") %></th>
+            <th><%= I18n.t("users.profile.albums") %></th>
+          </tr>
+          <tr>
+            <td><%= @user.num_comments %></td>
+            <td><%= @user.num_routes %></td>
+            <td><%= @user.num_albums %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-4 col-sm-offset-1 aright">
+      <div id="messages_<%= @user.id_to_s %>" class="inline-block">
+        <a href="/users/<%= @user.id_to_s %>/conversation" data-id="<%= @user.id_to_s %>" data-link-to="users#conversation" class="btn btn-info">
+          <%= @safe I18n.t("users.profile.conversation.message") %>
+        </a>
+      </div>
+      <div id="follow_<%= @user.id_to_s %>" class="inline-block">
+        <% if @current.follow_ids.indexOf(@user.id_to_s) > -1: %>
+          <%= @safe render_partial("users/del_follow", {id: @user.id_to_s}) %>
+        <% else: %>
+          <%= @safe render_partial("users/add_follow", {id: @user.id_to_s}) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

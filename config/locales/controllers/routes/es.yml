@@ -1,0 +1,9 @@
+es:
+  routes:
+    create:
+      created: Ruta creada con éxito
+      error_created: Se produjo un problema a la hora de crear la ruta. Comprueba el formato y el contenido del fichero.
+    destroy:
+      destroyed: La ruta ha sido eliminada del sistema
+    update:
+      updated: La ruta ha sido actualizada con éxito

@@ -1,0 +1,14 @@
+<div class="form-group">
+	<label for="comment_text" class="control-label">Comentario</label>
+	<%= text_area :comment, :text, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="comment_status" class="control-label checkbox">
+		<%= check_box :comment, :status, class: 'checkbox' %>
+		¿Comentario ofensivo?
+	</label>
+	
+</div>
+
+<%= submit_tag "Guardar", class: "btn btn-default", title: "Guardar" %>

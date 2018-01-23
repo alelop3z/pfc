@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Identificador</Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:name) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:difficulty) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:route_type) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:distance) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:duration) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:user_id) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:url) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:privacity) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:ready) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= Route.human_attribute_name(:allow_comments) %></Data></Cell>
+      </Row>
+      <% @routes.each do |_route| %>
+        <Row>
+          <Cell><Data ss:Type="String"><%= _route._id.to_s %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.name %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.get_difficulty %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.get_route_type %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.distance %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.duration %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.user.name %> (<%= _route.user.email %>)</Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.url %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.privacity ? "Publico" : "Privado" %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.ready ? "Listo" : "Borrador" %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _route.allow_comments ? "Permitir comentarios" : "Sin comentarios" %></Data></Cell>
+        </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

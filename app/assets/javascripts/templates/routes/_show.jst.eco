@@ -1,0 +1,21 @@
+<%= @safe render_partial("routes/show_route", {current: @current_user, route: @route, user: @user}) %>
+
+<% if @route.description: %>
+  <div class="module">
+    <div class="content">
+      <%= @safe @route.description %>
+    </div>
+  </div>
+<% end %>
+
+<% if @route.is_commentable == "1": %>
+  <%= @safe render_partial("routes/add_comment", {route: @route}) %>
+
+  <div class="module">
+    <div id="comments" data-timestamp>
+      <% for comment in @comments: %>
+        <%= @safe render_partial("routes/comment", {comment: comment}) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

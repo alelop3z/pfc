@@ -1,0 +1,25 @@
+<%= form_tag '/auth/identity/register', :html => {:method => :post, :class => "form-horizontal form"} do %>
+  <%= render :partial => "shared/error_messages", :locals => {:target => @user} %>
+  <div class="control-group">
+    <label for="name" class="sr-only"><%= User.human_attribute_name(:name) %></label>
+    <%= text_field_tag :name, params[:name], :class => "complete", :placeholder => User.human_attribute_name("name"), :class => "form-control" %>
+  </div>
+
+  <div class="control-group">
+    <label for="email" class="sr-only"><%= User.human_attribute_name(:email) %></label>
+    <%= email_field_tag :email, params[:email], :class => "complete", :placeholder => User.human_attribute_name("email"), :class => "form-control" %>
+  </div>
+
+  <div class="control-group password">
+    <label for="password" class="sr-only"><%= User.human_attribute_name(:password) %></label>
+    <%= password_field_tag :password, params[:password], :class => "complete", :placeholder => User.human_attribute_name("password"), :class => "form-control" %>
+  </div>
+
+  <div class="control-group password-confirmation" style="display:none;">
+    <%= password_field_tag :password_confirmation, params[:password_confirmation], :class => "complete", :placeholder => User.human_attribute_name("password_confirmation"), :class => "form-control" %>
+  </div>
+
+  <div class="actions col-md-offset-9">
+    <%= submit_tag t("users.sign_up"), :class => "btn btn-warning", :id => "submit-sign-up", :title => t("users.sign_up") %>
+  </div>
+<% end %>

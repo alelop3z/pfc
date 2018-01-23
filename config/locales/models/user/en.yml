@@ -1,0 +1,28 @@
+en:
+  mongoid:
+    models:
+      user: user
+    attributes:
+      user:
+        about_me: About me
+        avatar: Avatar
+        background_avatar: Background avatar
+        email: Email
+        errors:
+          about_me:
+            length:  "No puedes excederte de 150 caracteres"
+          email:
+            format: Email format is not correct
+            presence: We need your email
+            uniqueness: Email exists, are you <a href=\"/users/remember_password\">forget your password</a>?"
+          name:
+            length: Your complete name, please
+            presence: We need your name
+          password:
+            confirmation: Password and password confirmation are not equals
+            length: Your password length must be between 6 and 16 characters
+            presence: We need password for your account
+        name: Name
+        password: Password
+        password_confirmation: Password confirmation
+        web_page: Web page

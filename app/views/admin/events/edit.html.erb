@@ -1,0 +1,16 @@
+<h4 class="page-header">Edición de evento</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Edición de evento creado por <%= @event.user.name %> (<%= @event.user.email %>)
+    </div>
+    <div class="panel-body">
+    	<%= form_tag admin_event_path(@event), method: 'put' do |f| %>
+    		<%= render :partial => "shared/error_messages", :locals => {:target => @event} %>
+    		<%= render 'admin/events/form' %>
+    	<% end %>
+    </div>
+    <div class="panel-footer">
+        <%= link_to raw(t("helpers.back")), admin_events_path, title: 'Volver al listado de eventos' %>
+    </div>
+</div>

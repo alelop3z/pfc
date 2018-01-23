@@ -1,0 +1,12 @@
+<li>
+  <%= link_to raw(t("menu.my_friends")), wall_user_path(current_user), :title => t("menu.go_to.my_friends"), :data => {"id" => current_user.id_to_s, "link-to" => "users#wall"} %>
+</li>
+<li class="conversations">
+    <%= link_to raw(t("menu.conversations")), inbox_user_path(current_user), :title => t("menu.go_to.messages"), :data => {"id" => current_user.id_to_s, "link-to" => "users#inbox"} %><span class="badge hidden"></span>
+</li>
+<li>
+    <%= link_to raw(t("menu.routes")), routes_path, :title => t("menu.go_to.routes"), :data => {"link-to" => "routes#index"} %>
+</li>
+<li>
+  <%= link_to raw(t("menu.events")), events_path, :title => t("menu.go_to.events"), :data => {"link-to" => "events#index"} %>
+</li>

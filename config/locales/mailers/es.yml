@@ -1,0 +1,4 @@
+es:
+  contact_mailer:
+    send:
+      subject: "VoyEnBici: Contacto recibido desde página web"

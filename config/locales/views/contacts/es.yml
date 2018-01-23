@@ -1,0 +1,11 @@
+es:
+  contacts:
+    accept_privacy_policy: "Acepto la <a href='%{link}' rel='external'>politica de privacidad</a>"
+    contact: Contacto
+    do_you_want_contact_with_us?: ¿Quieres contactar con nosotros?
+    header_mail: Datos de la consulta
+    header_text: <p>Si desea ponerse en contacto con nosotros por favor rellene el siguiente formulario y nos pondremos en contacto tan pronto como sea posible.</p>
+    send: Enviar
+    send_contact_subject: Nueva consulta enviada desde el formulario de contacto
+    send_ok: Tu consulta ha sido enviada correctamente.
+    send_saludo: <h2>En la mayor brevedad trataremos de ponernos en contacto con usted.</h2><br />Un saludo.

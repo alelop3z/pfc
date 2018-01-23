@@ -1,0 +1,5 @@
+<% if @current.id_to_s != @user.id_to_s: %>
+  <%= @safe render_partial("users/menu", {sel: @action, user: @user}) %>
+<% else: %>
+  <%= @safe render_partial("users/user_menu", {sel: @action, user: @user}) %>
+<% end %>

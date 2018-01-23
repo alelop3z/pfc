@@ -1,0 +1,11 @@
+<% if target and target.errors.any? %>
+    <div id="error-explanation" class="span11 alert alert-danger alert-block">
+      <a class="close" data-dismiss="alert" href="#">×</a>
+      <h4><%= t("errors.template.header", :model => t("mongoid.models.#{target.class.to_s.downcase}"), :count => target.errors.count) %></h4>
+      <ul>
+        <% target.errors.full_messages.uniq.each do |msg| %>
+            <li><%= raw msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>

@@ -1,0 +1,16 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12">
+        <h2><%= I18n.t("comments.destroy.title") %></h2>
+        <p><%= I18n.t("comments.destroy.explication") %></p>
+        <form action="/comments/#{@comment.id_to_s}/confirm_destroy_comment" data-link-to="#comments#confirm_destroy_comment" data-id="<%= @comment.id_to_s %>" class="form-inline row" method="post">
+
+          <button type="submit" class="btn btn-success pull-right">
+            <%= I18n.t("comments.destroy.button") %>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+en:
+  contacts:
+    accept_privacy_policy: "Accept <a href='%{link}' rel='external'>privacy policy</a>"
+    contact: Contact
+    do_you_want_contact_with_us?: Do you want to contact with us?
+    header_mail: Contact data
+    header_text: <p>If you want to contact us please fill out the form below and we will contact you as soon as possible.</p>
+    send: Send
+    send_contact_subject: New data from the contact form
+    send_ok: Your details have been sent successfully.
+    send_saludo: <p>As soon as possible we will touch with you.</p>

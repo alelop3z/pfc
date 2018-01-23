@@ -1,0 +1,12 @@
+<div class="module">
+  <div id="albums" data-timestamp>
+    <div class="content content-header">
+      <h2><%= I18n.t("users.my_albums.title") %></h2>
+      <p class="subheader"><%= I18n.t("users.my_albums.message") %></p>
+    </div>
+
+    <% for album in @albums: %>
+      <%= @safe render_partial("users/album", {album: album}) %>
+    <% end %>
+  </div>
+</div>

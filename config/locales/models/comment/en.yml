@@ -1,0 +1,9 @@
+es:
+  mongoid:
+    models:
+      comment: comment
+    attributes:
+      comment:
+        participant_ids: participants
+        text: comment
+        user_id: user

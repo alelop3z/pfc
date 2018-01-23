@@ -1,0 +1,13 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12 import-url">
+        <h2><%= I18n.t("routes.share.title") %></h2>
+        <p><%= I18n.t("routes.share.explication_ok") %></p>
+        <button type="submit" class="btn btn-success">
+          <%= I18n.t("routes.share.close_button") %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

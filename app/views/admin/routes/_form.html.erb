@@ -1,0 +1,52 @@
+<div class="form-group">
+	<label for="route_name" class="control-label"><%= Route.human_attribute_name(:name) %></label>
+	<%= text_field :route, :name, placeholder: "Introduzca nombre", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="route_description" class="control-label"><%= Route.human_attribute_name(:description) %></label>
+	<%= text_area :route, :description, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <label for="route_gpx" class="control-label"><%= Route.human_attribute_name(:gpx) %></label>
+  <%= file_field :route, :gpx, class: 'form-control' %> 
+</div>
+
+<div class="form-group map-editor">
+  <div id="map"></div>
+  <input name="route_city" id="route_city" class="form-control" />
+  <div id="points" style="display:none;"></div>
+</div> 
+
+<div class="form-group row">
+  <div class="col-xs-6">
+    <label for="route_route_type" class="control-label"><%= Route.human_attribute_name(:route_type) %></label>
+    <%= select :route, :route_type, options_for_select(Main::TYPES), {prompt: t("main.route_types.prompt")}, {class: 'form-control'} %>
+  </div>
+
+  <div class="col-xs-6">
+    <label for="route_difficulty" class="control-label"><%= Route.human_attribute_name(:difficulty) %></label>
+    <%= select :route, :difficulty, options_for_select(Main::DIFFICULTY), {prompt: t("main.difficulty.prompt")}, {class: 'form-control'} %>
+  </div>
+</div>
+
+<div class="form-group row">
+  <div class="col-xs-6">
+    <label for="route_allow_comments" class="checkbox">
+    	<%= check_box :route, :allow_comments %> <%= Route.human_attribute_name(:allow_comments) %>
+    </label>
+  </div>
+
+  <div class="col-xs-6">
+    <label for="route_private" class="checkbox">
+    	<%= check_box :route, :private %> <%= Route.human_attribute_name(:private) %>
+    </label>
+  </div>
+</div>
+
+<%= submit_tag "Guardar", class: "btn btn-default", title: "Guardar" %>
+
+<script type="text/javascript">
+  show_route("map", <%= raw @points.to_json %>, <%= raw @markers.to_json %>, true)
+</script>

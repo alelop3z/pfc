@@ -1,0 +1,9 @@
+<div class="module">
+  <div class="content-module acenter">
+    <% if @user.avatar %>
+      <%= link_to image_tag(@user.avatar.url(:thumb), :title => t("users.go_to_wall", :name => @user.name), :alt => t("users.go_to_wall", :name => @user.name)), wall_user_path(@user), :title => t("users.go_to_wall", :name => @user.name), :class => "pull-left avatar" %>
+    <% end %>
+    <strong class="fullname"><%= link_to @user.name, wall_user_path(@user), :title => t("users.go_to_wall", :name => @user.name) %></strong>
+    <span class="fullname subheader"><%= t("users.go_to_wall", :name => @user.name) %></span>
+  </div>
+</div>

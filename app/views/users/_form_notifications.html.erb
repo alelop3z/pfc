@@ -1,0 +1,24 @@
+<div class="row">
+  <%= form_for(@user, :url => {:controller => :users, :action => :update, :id => @user, :type => :password}, :html => {:method => :put, :class => "form-horizontal"}) do |f| %>
+    <div class="col-md-12">
+      <div class="form-group">
+        <label for="user_old_password" class="control-label"><%= t("user.old_password") %>: </label>
+        <%= f.password_field :old_password %>
+      </div>
+
+      <div class="form-group">
+        <label for="user_old_password" class="control-label"><%= t("user.password") %>: </label>
+        <%= f.password_field :password %>
+      </div>
+
+      <div class="form-group">
+        <label for="user_password_confirmation" class="control-label"><%= t("user.password_confirmation") %>: </label>
+        <%= f.password_field :password_confirmation %>
+      </div>
+
+      <div class="pull-right margin-bottom">
+        <%= f.submit t("users.update"), :class => "btn btn-warning", :id => "submit-update", :title => t("users.update") %>
+      </div>
+    </div>
+  <% end %>
+</div>

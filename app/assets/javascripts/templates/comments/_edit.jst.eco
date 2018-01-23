@@ -1,0 +1,18 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12">
+        <h2><%= I18n.t("comments.edit.title") %></h2>
+        <form action="/comments/<%= @comment.id_to_s %>/update" data-link-to="#comments#update" data-id="<%= @comment.id_to_s %>" class="row" method="put">
+          <div class="col-xs-12 margin-bottom">
+            <textarea name="comment[text]" id="comment_text" class="form-control"><%= @comment.text %></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success pull-right">
+            <%= I18n.t("comments.update.button") %>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

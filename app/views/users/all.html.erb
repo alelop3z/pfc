@@ -1,0 +1,42 @@
+<div class="span12">
+  <%= render :partial => "my_menu_user", :locals => {:sel => "wall"} %>
+</div>
+
+<div class="span30 offset2">
+  <div class="module">
+    <div class="content-header">
+      <div class="header-inner">
+        <h2 class="without-margin-top"><%= t("users.search_friends") %></h2>
+        <p class="subheader"><%= t("users.search_name_friends") %></p>
+      </div>
+    </div>
+
+    <div class="content without-padding">
+      <div id="users">
+        <% @users.each do |user| %>
+          <div class="content">
+            <div class="media" id="friend_<%= user.id %>">
+              <%= link_to image_tag(user.avatar.url(:list), :alt => user.name, :class => "avatar size48"), wall_user_path(user), :title => t("users.go_to_wall", :name => user.name), :class => "pull-left avatar" %>
+              <div class="media-body">
+                <div class="pull-right">
+                  <% if @current_user.follow_ids.include?(user.id.to_s) %>
+                    <%= link_to t("users.del_friend"), unfriendship_user_path(user.id), :title => t("users.del_friend_to", :name => user.name), :remote => true, :method => :put, :class => "btn btn-danger" %>
+                  <% else %>
+                    <%= link_to t("users.add_friend"), friendship_user_path(user.id), :title => t("users.add_friend_to", :name => user.name), :remote => true, :method => :put, :class => "btn btn-info" %>
+                  <% end %>
+                </div>
+                <div class="span18">
+                  <%= link_to user.name, wall_user_path(user), :title => t("users.go_to_wall", :name => user.name), :class => "block" %>
+                  <% if user.about_me %>
+                    <p class="small grey"><%= user.about_me %></p>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

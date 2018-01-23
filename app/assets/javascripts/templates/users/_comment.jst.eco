@@ -1,0 +1,3 @@
+<div class="content" id="comment_<%= @comment.id_to_s %>" data-timestamp="<%= @comment.unix_timestamp %>">
+  <%= @safe render_partial("users/content_comment", {comment: @comment, current: @current}) %>
+</div>

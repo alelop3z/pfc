@@ -1,0 +1,27 @@
+<h4 class="page-header">Usuarios</h4>
+
+<%= render "admin/users/search" %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Gestión de usuarios
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= User.human_attribute_name(:name) %></th>
+				<th><%= User.human_attribute_name(:email) %></th>                
+                <th><%= User.human_attribute_name(:created_at) %></th>
+                <th><%= t("main.options") %></th>
+            </tr>
+
+            <% @users.each do |user| %>
+                <tr id="user_<%= user._id %>">
+                    <%= render partial: "admin/users/user", locals: {user: user} %>
+                </tr>
+            <% end %>
+        </table>
+
+        <%= paginate @users %>
+    </div>
+</div>

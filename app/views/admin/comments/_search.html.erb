@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <%= link_to raw("<i class=\"fa fa-file-excel-o\"></i>  Descargar Excel"), admin_comments_path(format: 'xls', comment: params[:comment]), title: 'Descargar comentarios en formato Excel', class: 'btn btn-xs btn-default pull-right' %>
+        <%= link_to raw("<i class=\"fa fa-file\"></i>  Descargar CSV"), admin_comments_path(format: 'csv', comment: params[:comment]), title: 'Descargar comentarios en formato CSV', class: 'btn btn-xs btn-default pull-right' %>
+        Buscador de comentarios
+    </div>
+    <div class="panel-body">
+        <%= form_tag admin_comments_path, method: 'get', class: "form-inline" do %>
+			<div class="form-group">
+				<%= label_tag :comment_user, "Usuario", class: "sr-only" %> 
+				<%= text_field_tag "comment[user]", (params[:comment][:user] rescue nil), class: "form-control", placeholder: "Introduzca login o email de usuario" %>
+			</div>
+
+            <div class="form-group">
+                <label class="checkbox" for="comment_mark_as_offensive"> 
+                    <%= check_box_tag "comment[mark_as_offensive]", 1, (params[:comment][:mark_as_offensive] rescue nil) %>
+                    Marcado como ofensivo
+                </label>
+            </div>
+
+			<%= submit_tag "Buscar", class: "btn btn-default pull-right" %>
+        <% end %>
+    </div>
+</div>

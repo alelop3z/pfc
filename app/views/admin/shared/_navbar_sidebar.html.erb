@@ -1,0 +1,23 @@
+<div class="navbar-default sidebar" role="navigation">
+    <div class="sidebar-nav navbar-collapse">
+        <ul class="nav in" id="side-menu">  
+            <li class="sidebar-search"></li>
+            <li>
+            <%= link_to raw("<i class=\"fa fa-database fa-fw\"></i> Escritorio"), admin_dashboard_index_path, title: "Escritorio" %>
+            </li>
+            <li>
+                <%= link_to raw("<i class=\"fa fa-comments fa-fw\"></i> Comentarios"), admin_comments_path, title: "Comentarios" %>
+            </li>
+            <li>
+                <%= link_to raw("<i class=\"fa fa-calendar fa-fw\"></i> Eventos"), admin_events_path, title: "Eventos" %>
+            </li>
+            <li>
+                <%= link_to raw("<i class=\"fa fa-bicycle fa-fw\"></i> Rutas"), admin_routes_path, title: "Rutas" %>
+            </li>
+            <li>
+                <%= link_to raw("<i class=\"fa fa-users fa-fw\"></i> Usuarios"), admin_users_path, title: "Usuarios" %>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-collapse -->
+</div>

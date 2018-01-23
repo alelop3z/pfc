@@ -1,0 +1,9 @@
+<td><%= route.name %></td>
+<td><%= route.get_route_type %></td>
+<td><%= route.get_difficulty %></td>
+<td><%= route.private ? "Si" : "No" %></td>
+<td><%= l route.created_at, format: :short rescue nil %></td>
+<td class="options">
+	<%= link_to raw(t("main.buttons.edit")), edit_admin_route_path(route), class: 'btn btn-xs btn-default' %>
+	<%= link_to raw(t("main.buttons.destroy")), admin_route_path(route), method: :delete, remote: true, data: {confirm: "¿Está seguro de eliminar esta ruta? (no se podrán recuperar los datos eliminados)"}, class: 'btn btn-danger btn-xs' %>
+</td>

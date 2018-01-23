@@ -1,0 +1,7 @@
+<td><%= event.name %></td>
+<td><%= event.get_type %></td>
+<td><%= l event.init_date, format: :long rescue nil %></td>
+<td class="options">
+	<%= link_to raw(t("main.buttons.edit")), edit_admin_event_path(event), class: "btn btn-default btn-xs" %>
+	<%= link_to raw(t("main.buttons.destroy")), admin_event_path(event), method: :delete, remote: true, class: "btn btn-danger btn-xs", data: {confirm: "¿Está seguro de eliminar el evento seleccionado? (no se podrán recuperar los datos eliminados)" } %>
+</td>

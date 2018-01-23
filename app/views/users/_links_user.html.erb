@@ -1,0 +1,5 @@
+<% if link == "add" %>
+  <%= link_to t("users.add_friend"), friendship_user_path(user.id), :title => t("users.add_friend_to", :name => user.name), :remote => true, :method => :put, :class => "btn btn-info" %>
+<% else %>
+  <%= link_to t("users.del_friend"), unfriendship_user_path(user.id), :title => t("users.del_friend_to", :name => user.name), :remote => true, :method => :put, :class => "btn btn-danger" %>
+<% end %>

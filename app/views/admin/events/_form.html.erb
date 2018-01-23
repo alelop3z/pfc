@@ -1,0 +1,47 @@
+<div class="form-group">
+	<label for="event_name" class="control-label"><%= Event.human_attribute_name(:name) %></label>
+	<%= text_field :event, :name, placeholder: "Introduzca nombre", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="event_summary" class="control-label"><%= Event.human_attribute_name(:summary) %></label>
+	<%= text_area :event, :summary, rows: 3, placeholder: "Introduzca resumen", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="event_description" class="control-label"><%= Event.human_attribute_name(:description) %></label>
+	<%= text_area :event, :description, rows: 8, placeholder: "Introduzca descripcion", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="event_init_date" class="control-label"><%= Event.human_attribute_name(:init_date) %></label>
+	<%= text_field :event, :init_date, placeholder: "Introduzca fecha inicio", data: {behaviour: "datepicker"}, class: 'form-control datepicker' %>
+</div>
+
+<div class="form-group map-editor">
+  <div id="map"></div>
+  <input name="event_city" id="event_city" class="form-control" />
+  <input type="hidden" name="event[latitude]" id="event_latitude" value="<%= @event.latitude %>" />
+  <input type="hidden" name="event[longitude]" id="event_longitude" value="<%= @event.longitude %>" />
+</div> 
+
+<div class="form-group">
+	<label for="event_address" class="control-label"><%= Event.human_attribute_name(:address) %></label>
+	<%= text_field :event, :address, placeholder: "Introduzca dirección", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+  <label for="event_event_type" class="control-label"><%= Event.human_attribute_name(:type) %></label>
+  <%= select :event, :event_type, options_for_select(Main::TYPES), {prompt: t("main.route_types.prompt")}, {class: 'form-control'} %>
+</div>
+
+<div class="form-group">
+	<label for="event_url" class="control-label"><%= Event.human_attribute_name(:url) %></label>
+	<%= text_field :event, :url, placeholder: "Introduzca url", class: 'form-control' %>
+</div>
+
+<%= submit_tag "Guardar", class: "btn btn-default", title: "Guardar" %>
+
+<script type="text/javascript">
+	show_event("map", <%= raw @markers.to_json %>, "event", true)
+</script>

@@ -1,0 +1,7 @@
+es:
+  mongoid:
+    models:
+      config: configuration
+    attributes:
+      key: key
+      value: value

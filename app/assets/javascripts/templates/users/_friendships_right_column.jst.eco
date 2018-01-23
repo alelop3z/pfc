@@ -1,0 +1,17 @@
+<div class="module">
+  <div id="friendships" data-timestamp>
+    <div class="content content-header">
+      <% if @action == "follow": %>
+      	<h2><%= I18n.t("users.friendships") %></h2>
+      	<p class="subheader"><%= I18n.t("users.friendships_message") %></p>
+      <% else: %>
+        <h2><%= I18n.t("users.followers") %></h2>
+      	<p class="subheader"><%= I18n.t("users.followers_message") %></p>
+      <% end %>
+    </div>
+
+    <% for follower in @followers: %>
+      <%= @safe render_partial("users/friendship", {friendship: follower, user: @user}) %>
+    <% end %>
+  </div>
+</div>

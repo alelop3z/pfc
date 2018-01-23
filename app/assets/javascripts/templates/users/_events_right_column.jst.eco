@@ -1,0 +1,15 @@
+<div class="module">
+  <div id="events" data-timestamp>
+    <div class="content content-header">
+      <a href="/events/new" data-link-to="events#new" class="btn btn-mini btn-success pull-right hidden-xs">
+        <%= I18n.t("users.my_events.new") %>
+      </a>	
+      <h2><%= I18n.t("users.my_events.title") %></h2>
+      <p class="subheader"><%= I18n.t("users.my_events.message") %></p>
+    </div>
+
+    <% for _event in @events: %>
+      <%= @safe render_partial("events/event", {current: @current, event: _event}) %>
+    <% end %>
+  </div>
+</div>

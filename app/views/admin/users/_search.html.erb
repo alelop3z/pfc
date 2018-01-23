@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+    	<%= link_to raw("<i class=\"fa fa-file-excel-o\"></i>  Descargar Excel"), admin_users_path(format: 'xls'), title: 'Descargar usuarios excel', class: 'btn btn-xs btn-default pull-right' %>
+    	<%= link_to raw("<i class=\"fa fa-file\"></i>  Descargar CSV"), admin_users_path(format: 'csv'), title: 'Descargar usuarios en formato CSV', class: 'btn btn-xs btn-default pull-right' %>
+        Buscador de usuarios 
+    </div>
+    <div class="panel-body">
+        <%= form_tag admin_users_path, method: 'get', class: "form-inline" do %>
+			<div class="form-group">
+				<%= label_tag :user_name, "Nombre", class: "sr-only" %> 
+				<%= text_field_tag "user[name]", (params[:user][:name] rescue nil), class: "form-control", placeholder: "Introduzca nombre" %>
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :user_email, "Email", class: "sr-only" %>
+				<%= text_field_tag "user[email]", (params[:user][:email] rescue nil), class: "form-control", placeholder: "Introduzca email" %> 
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :user_from, "Fecha de inicio", class: "sr-only" %>
+				<%= text_field_tag "user[from]", (params[:user][:from] rescue nil), class: "form-control datepicker", placeholder: "Introduzca Fecha de inicio" %> 
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :user_from, "Fecha de fin", class: "sr-only" %>
+				<%= text_field_tag "user[to]", (params[:user][:to] rescue nil), class: "form-control datepicker", placeholder: "Introduzca Fecha de fin" %> 
+			</div>
+
+			<%= submit_tag "Buscar", class: "btn btn-default" %>
+        <% end %>
+    </div>
+</div>

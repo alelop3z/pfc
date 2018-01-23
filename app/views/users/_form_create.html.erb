@@ -1,0 +1,43 @@
+<%= form_for(@user, :url => {:controller => :users, :action => :create}, :html => {:method => :post, :class => "form-horizontal form"}) do |f| %>
+  <div class="control-group">
+    <label for="user_name" class="strong"><%= t("user.form_create.name") %> <span class="help-inline">(<%= t("users.form_create.name") %>)</span></label>
+    <%= f.text_field :name, :class => "complete", :placeholder => t("user.name"), :class => "span20" %>
+    <% if @user.errors.include?(:name) %>
+      <span class="help-inline error span10"><%= @user.errors.get(:name).first %></span>
+    <% end %>
+  </div>
+
+  <div class="control-group">
+    <label for="user_email" class="strong"><%= t("user.form_create.email") %> <span class="help-inline">(<%= t("users.form_create.email") %>)</span></label>
+    <%= f.email_field :email, :class => "complete", :placeholder => t("user.email"), :class => "span20" %>
+    <% if @user.errors.include?(:email) %>
+      <span class="help-inline error span10"><%= raw @user.errors.get(:email).first %></span>
+    <% end %>
+  </div>
+
+  <div class="control-group">
+    <label for="user_password" class="strong"><%= t("user.form_create.password") %> <span class="help-inline">(<%= t("users.form_create.password") %>)</span></label>
+    <%= f.password_field :password, :class => "complete", :placeholder => t("user.password"), :class => "span20" %>
+    <% if @user.errors.include?(:password) %>
+      <span class="help-inline error span10"><%= @user.errors.get(:password).first %></span>
+    <% end %>
+    <%= f.hidden_field :password_confirmation %>
+    <%= f.hidden_field :captcha %>
+  </div>
+
+  <div class="control-group">
+    <div class="span20">
+      <label class="checkbox"><%= f.check_box "remember_token", {}, true, false %><%= t("users.form_create.remember_my_data") %></label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="span20">
+
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit t("users.sign_up"), :class => "span20 btn btn-warning", :id => "submit-sign-up", :title => t("users.sign_up") %>
+  </div>
+<% end %>

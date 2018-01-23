@@ -1,0 +1,11 @@
+<div class="module">
+  <div class="content-module">
+    <form class="form-inline post-user" method="post" id="add-message" action="/users/<%= @conversation.id_to_s %>/add_message" data-id="<%= @conversation.id_to_s %>" data-link-to="#users#add_message">
+      <div class="form-group col-xs-10 post">
+        <label class="sr-only" for="comment"></label>
+		<textarea type="text" id="message" name="message" class="form-control" autocomplete="off" placeholder="Escribe tu mensaje"></textarea>
+      </div>
+      <input type="submit" value="Enviar" class="btn btn-warning pull-right" />
+    </form>
+  </div>
+</div>

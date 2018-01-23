@@ -1,0 +1,268 @@
+@import "framework/variables.scss";
+@import "framework/mixins.scss";
+
+.size32{
+  width:32px;
+  height:32px;
+  }
+.size48{
+  width:48px;
+  height:48px;
+  }
+.size73{
+  width:73px;
+  height:73px;
+  }
+
+.avatar{
+  @include border-radius(5px);
+  }
+
+/* Capa de datos del usuario - Nombre, datos personales (informativos) */
+.usuario{
+  text-align:right;
+  color:#FFF;
+  }
+  .usuario IMG {
+    background:white url(/assets/comunes/marco-detalle-usuario.gif) top left no-repeat;
+    padding:8px 10px 8px 8px;
+    }
+  .usuario .datos-personales {
+    display:block;
+    color:#905656;
+    }
+    .usuario .datos-personales SPAN {
+      display:inline;
+      padding:3px 10px 3px 5px;
+      background-color:#FFF9C7;
+      }
+  .usuario H1 {
+    font-size:15px;
+    line-height:16px;
+    margin:0 0 5px;
+    padding:5px 0 0;
+    }
+  .usuario P {
+    color:#5A5A5A;
+    font-size:12px;
+    line-height:18px;
+    margin:0 0 5px;
+    }
+    .usuario P .resaltado {
+      background:#FFF9C7;
+      color:#905656;
+      float:left;
+      font-size:11px;
+      padding:0 7px;
+      }
+  .usuario DIV {
+    display:inline;
+    font-size:11px;
+    margin:0;
+    position:relative;
+    }
+    .usuario DIV A {
+      color:#FBE1C4;
+      }
+      .usuario DIV A:hover {
+        text-decoration:none;
+        color:#FFF286;
+        }
+    .usuario .cuenta {
+      padding:6px 15px 5px;
+      }
+      .usuario .cuenta A {
+        background:url(/assets/comunes/flecha-cuenta.gif) center right no-repeat;
+        padding-right:15px;
+        }
+    .usuario .buzon {
+      padding:6px 15px 4px 0;
+      background:url(/assets/comunes/separador-buzon.gif) bottom right no-repeat;
+      }
+    .usuario .notificaciones A {
+      background:#E43411;
+      padding:6px 9px 5px;
+      font-weight:700;
+      color:#FFF;
+      }
+      .usuario .notificaciones A:hover {
+        background:#FFF;
+        color:#000;
+        }
+    .usuario .cerrar_session {
+      margin:0 0 0 10px;
+      }
+    .usuario.acceso{
+      margin:12px 0 0 0;
+      }
+
+SECTION{
+  padding:73px 0 0;
+  }
+  .form #submit-sign-up,
+  .form #submit-remember-password,
+  .form #submit-sign-in{
+    padding-top:10px;
+    padding-bottom:10px;
+    width:400px;
+    }
+  .form INPUT[class*="span"]{
+    float:left;
+    }
+  .form .help-inline{
+    color:#999;
+    font-size:13px;
+    font-weight:normal;
+    }
+    .form .help-inline.error{
+      color:#c33;
+      }
+
+  #comments .content,
+  #users .content{
+    border-top:1px solid #DDD;
+    }
+    #comments .content:nth-child(1),
+    #users .content:nth-child(1){
+      border-top:0;
+      }
+
+FOOTER {
+  position:relative;
+  bottom:0;
+  float:left;
+  width:100%;
+  background:#ff4621;
+  border-top:4px solid #c82d0e;
+  padding:10px 0;
+  margin:30px 0 0;
+  font-family: "Lucida Grande", Tahoma, Arial, Helvetica;
+  color:#FFF;
+  font-size:12px;
+  }
+  #home FOOTER{
+    background:transparent;
+    border-top:0;
+    float:none;
+    width:100%;
+    padding:0;
+    }
+    FOOTER .right {
+      float: right;
+      color: #fbf7da;
+      }
+      #home FOOTER .right{
+        float:none;
+        }
+    FOOTER A {
+      color: #fbf7da;
+      margin: 0 10px;
+      }
+      FOOTER A:hover {
+        color: #fff286;
+        }
+
+/* Imagenes de los mapas */
+.map_container IMG{
+  max-width:none;
+  }
+
+
+/* Sobreescribir estilos bootstrap */
+.navbar-inner{
+  background:transparent;
+  }
+.navbar .nav>li>a{
+  color:#FFF;
+  text-shadow:0 0 0 #FFF;
+  }
+  .navbar .nav > LI > A:hover{
+    color:#EFEFEF;
+    }
+
+/* Estilos */
+.hidden{
+  display:none;
+  }
+
+.block{
+  display:block;
+  }
+
+.grey{
+  color:#999;
+  }
+
+.small.grey{
+  font-size:13px;
+  }
+
+.border-radius{
+  background:#FFF;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  border-radius:5px;
+  border:1px solid #BBB;
+  float:left;
+  padding:30px 0;
+  }
+  .border-radius H1{
+    border-bottom:1px solid #DDD;
+    }
+
+.bx-viewport{
+  top:-5px;
+  }
+
+.bxslider{
+  height:200%;
+  margin:0;
+  width:200%;
+  }
+
+.field_with_errors{
+  display:inline;
+  }
+
+.fright{
+  float:right;
+  }
+
+.left-image{
+  float:left;
+  margin:0 0.7em 0 0;
+  }
+
+.margin-top{
+  margin-top:10px;
+  }
+.margin-bottom{
+  margin-bottom:10px;
+  }
+.double-margin-top{
+  margin-top:20px;
+  }
+.double-margin-bottom{
+  margin-bottom:20px;
+  }
+
+.right-image{
+  float:right;
+  margin:0 0 0 0.7em;
+  }
+
+.strong{
+  font-weight:700;
+  }
+
+.bg-grey{
+  background:#EFEFEF;
+  }
+
+.height3{
+  height:100px;
+  }
+
+.without-margin-top{
+  margin-top:0!important;
+  }

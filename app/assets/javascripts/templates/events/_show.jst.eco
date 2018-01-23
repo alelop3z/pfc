@@ -1,0 +1,21 @@
+<%= @safe render_partial("events/show_event", {current: @current_user, event: @event, user: @user}) %>
+
+<% if @event.description: %>
+  <div class="module">
+    <div class="content">
+      <%= @safe @event.description %>
+    </div>
+  </div>
+<% end %>
+
+<% if @event.is_commentable == "1": %>
+  <%= @safe render_partial("events/add_comment", {event: @event}) %>
+
+  <div class="module">
+    <div id="comments" data-timestamp>
+      <% for comment in @comments: %>
+        <%= @safe render_partial("events/comment", {comment: comment}) %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

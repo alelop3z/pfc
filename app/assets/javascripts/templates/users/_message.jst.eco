@@ -1,0 +1,24 @@
+<% if @message.from == "from": %>
+  <% user = @conversation.user_from %>
+<% else: %>
+  <% user = @conversation.user_to %>
+<% end %>
+
+<div class="content" id="message_<%= @message.id %>">
+  <div class="media">
+    <a class="pull-left" href="/users/<%= user.id_to_s %>/wall">
+      <img class="media-object img-circle" src="<%= user.avatar.replace("/original/", "/list/") %>" alt="<%= user.name %>" />
+    </a>
+    <div class="media-body">
+      <span>
+        <strong>
+          <a href="/users/<%= user.id_to_s %>/wall" data-link-to="users#wall" data-id="<%= user.id_to_s %>">
+            <%= user.name %>
+          </a>
+        </strong>
+        <time class="timeago" datetime="<%= @message.created_at %>"></time>
+      </span>
+      <p><%= @safe @message.text %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,1 @@
+<a href="/users/<%= @id %>/add_follow" data-id="<%= @id %>" data-link-to="#users#add_follow" class="btn btn-small btn-success"><%= @safe I18n.t("users.profile.follow.add") %></a>

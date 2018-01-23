@@ -1,0 +1,17 @@
+<h4 class="page-header">Edición de usuario</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Edición de usuario <%= @user.name %>
+    </div>
+    <div class="panel-body">
+    	<%= form_tag admin_user_path(@user), method: 'put' do |f| %>
+    		<%= render :partial => "shared/error_messages", :locals => {:target => @user} %>
+    		<%= render 'admin/users/form' %>
+    	<% end %>
+    </div>
+
+    <div class="panel-footer">
+    	<%= link_to raw(t("helpers.back")), admin_users_path, title: 'Volver al listado de usuarios' %>
+    </div>
+</div>

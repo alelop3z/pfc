@@ -1,0 +1,38 @@
+es:
+  comments:
+    answer: Responder
+    answer_comment: Responder al comentario
+    close: Ocultar
+    close_comment: Ocultar
+    destroy:
+      are_you_sure?: ¿Está seguro de eliminar este comentario? (no se podrá recuperar)
+      button: Eliminar
+      explication: Se va a proceder a eliminar del sistema el comentario seleccionado. Tenga en cuenta que no se podrá recuperar la información asociada al comentario.
+      explication_error: Se ha producido un error a la hora de eliminar el comentario seleccionado. Vuelva a intentarlo o contacte con el servicio técnico.
+      title: Eliminar comentario
+    edit:
+      title: Editar comentario
+    insert_your_comment: Escribe algo...
+    mark_as_offensive:
+      close_button: Cerrar
+      explication_ko: Se ha producido un problema a la hora de marcar el comentario seleccionado como un comentario ofensivo. Si persisten los problemas por favor contacta con nuestro equipo en <a href="mailto:support@voyenbici.com">support@voyenbici.com</a>
+      explication_ok: Nuestro equipo de administración ya ha recibido tu notificación calificando el comentario seleccionado como ofensivo. Gracias por tu colaboración.
+      title: Comentario marcado como ofensivo
+    open: Abrir
+    open_comment: Abrir comentario
+    publish_it: Publicar
+    send_by_mail: Enviar por correo
+    send_by_mail_comment: Enviar comentario por correo electrónico
+    text: 
+      length: <p>El comentario no puede ser superior a 256 caracteres</p>
+      presence: <p>El comentario no puede estar en blanco</p>
+    types:
+      album: album
+      comment: comment
+      event: event
+      route: route
+    update:
+      button: Actualizar
+    want_to_make_a_comment?: ¿Quieres realizar un comentario?
+    write_your_message: Escribe tu mensaje
+    write_your_message_to: Escribe tu mensaje a %{name}

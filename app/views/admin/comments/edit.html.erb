@@ -1,0 +1,17 @@
+<h4 class="page-header">Edición de comentario</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Edición de comentario realizado por <%= @comment.user.name %> (<%= @comment.user.email %>)
+    </div>
+    <div class="panel-body">
+    	<%= form_tag admin_comment_path(@comment), method: 'put' do |f| %>
+    		<%= render :partial => "shared/error_messages", :locals => {:target => @comment} %>
+    		<%= render 'admin/comments/form' %>
+    	<% end %>
+    </div>
+
+    <div class="panel-footer">
+    	<%= link_to raw(t("helpers.back")), admin_comments_path, title: 'Volver al listado de comentarios' %>
+    </div>
+</div>

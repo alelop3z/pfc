@@ -1,0 +1,46 @@
+<div class="form-group">
+	<label for="user_name" class="control-label"><%= User.human_attribute_name(:name) %></label>
+	<%= text_field :user, :name, placeholder: "Introduzca nombre", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="user_email" class="control-label"><%= User.human_attribute_name(:email) %></label>
+	<%= text_field :user, :email, placeholder: "Introduzca email", class: 'form-control' %>
+</div>
+
+<div class="form-group row">
+	<div class="col-xs-6">
+		<label for="user_password" class="control-label"><%= User.human_attribute_name(:password) %></label>
+		<%= password_field :user, :password, placeholder: "Introduzca contraseña", class: 'form-control' %>
+	</div>
+
+	<div class="col-xs-6">
+		<label for="user_password_confirmation" class="control-label"><%= User.human_attribute_name(:password_confirmation) %></label>
+		<%= password_field :user, :password_confirmation, class: 'form-control' %>
+	</div>
+</div>
+
+<div class="form-group">
+	<label for="user_web_page" class="control-label"><%= User.human_attribute_name(:web_page) %></label>
+	<%= text_field :user, :web_page, placeholder: "Introduzca página web", class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<label for="user_about_me" class="control-label"><%= User.human_attribute_name(:about_me) %></label>
+	<%= text_area :user, :about_me, class: 'form-control' %>
+</div>
+
+<div class="form-group">
+	<% if @user.photo %>
+		<div class="clearfix">
+			<%= image_tag @user.photo, width: '100px' %>
+		</div>
+	<% end %>
+
+	<label for="user_avatar" class="control-label"><%= User.human_attribute_name(:avatar) %></label>
+	<%= file_field :user, :avatar %>
+
+	
+</div>
+
+<%= submit_tag "Guardar", class: "btn btn-default", title: "Guardar" %>

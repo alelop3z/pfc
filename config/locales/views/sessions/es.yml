@@ -1,0 +1,9 @@
+es:
+  sessions:
+    invalid_mail_or_password: El usuario y / o la contraseña introducidos son incorrectos
+    logged_in: Has iniciado sesión
+    new: Iniciar sesión en Voy En Bici
+    sign_in:
+      email: Introduce tu correo electrónico
+      password: Tu contraseña
+      sign_in: Iniciar sesión

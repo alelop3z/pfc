@@ -1,0 +1,8 @@
+<td><%= comment.text %></td>
+<td><%= comment.user.name %> (<%= comment.user.email %>)</td>
+<td><%= l comment.created_at, format: :long %></td>
+
+<td class="options">
+	<%= link_to raw(t("main.buttons.edit")), edit_admin_comment_path(comment), class: "btn btn-xs btn-default" %>
+	<%= link_to raw(t("main.buttons.destroy")), admin_comment_path(comment), method: :delete, remote: true, confirm: "¿Está seguro de eliminar este comentario? (no se podrán recuperar los datos eliminados)", class: "btn btn-danger btn-xs", data: {confirm: "¿Está seguro de eliminar el comentario seleccionado?"} %>
+</td>

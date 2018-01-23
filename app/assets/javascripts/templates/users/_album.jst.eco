@@ -1,0 +1,17 @@
+<div class="content" id="album_<%= @album.id_to_s %>">
+  <div class="media">
+    <a class="pull-left" href="/albums/<%= @album.id_to_s %>">
+      <img class="media-object" src="<%= @album.name %>" alt="<%= @album.name %>" />
+    </a>
+    <div class="media-body">
+      <span>
+        <strong>
+          <a href="/albums/<%= @album.id_to_s %>">
+            <%= @album.name %>
+          </a>
+        </strong>
+        <time class="timeago" datetime="<%= @album.created_at %>"></time>
+      </span>
+    </div>
+  </div>
+</div>

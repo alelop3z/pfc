@@ -1,0 +1,20 @@
+<div class="module">
+  <div class="content-header">
+    <div class="header-inner">
+      <h2><%= t("users.follows.my_followers") %></h2>
+    </div>
+  </div>
+  <div class="content-module">
+    <ul class="media-list">
+      <% followers.each do |_follower| %>
+        <li class="media" id="follower_<%= _follower.id %>">
+          <%= link_to image_tag(_follower.avatar.url(:thumb), :title => t("users.go_to_wall", :name => _follower.name, :class => "media-object avatar size32"), :alt => t("users.go_to_wall", :name => _follower.name), :class => "avatar"), wall_user_path(_follower), :title => t("users.go_to_wall", :name => _follower.name), :class => "pull-left size32" %>
+          <div class="media-body">
+            <strong class="fullname"><%= link_to _follower.name, wall_user_path(_follower), :title => t("users.go_to_wall", :name => _follower.name) %></strong>
+            <span class="fullname subheader"><%= link_to t("users.unfriend"), unfriendship_user_path(_follower), :remote => true, :title => t("users.unfriend_user", :name => _follower.name), :confirm => t("users.are_you_sure_unfriendship?", :name => _follower.name), :method => :put, :data => {:id => _follower.id_to_s, "link-to" => "users#unfriendship"} %></span>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

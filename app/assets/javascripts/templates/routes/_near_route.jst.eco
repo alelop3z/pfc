@@ -1,0 +1,14 @@
+<div class="media">
+  <a class="pull-left" href="/routes/<%= @route.id_to_s %>" data-id="<%= @route.id_to_s %>" data-link-to="routes#show">
+    <img class="media-object" src="<%= @route.static_image %>" alt="<%= @route.name %>" />
+  </a>
+  <div class="media-body">
+    <span>
+      <strong>
+        <a href="/routes/<%= @route.id_to_s %>" data-id="<%= @route.id_to_s %>" data-link-to="routes#show">
+          <%= @route.name %>
+        </a>
+      </strong>
+    </span>
+  </div>
+</div>

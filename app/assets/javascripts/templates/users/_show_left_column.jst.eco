@@ -1,0 +1,1 @@
+<%= @safe render_partial("users/user_menu", {sel: @action, user: @user}) %>

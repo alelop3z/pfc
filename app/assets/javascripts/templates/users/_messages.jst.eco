@@ -1,0 +1,11 @@
+<%= @safe render_partial("users/breadcrumb", {conversation: @conversation, current: @current}) %>
+
+<div class="module">
+  <div id="messages" data-timestamp>
+    <% for message in @conversation.msgs: %>
+      <%= @safe render_partial("users/message", {conversation: @conversation, message: message}) %>
+    <% end %>
+  </div>
+</div>
+
+<%= @safe render_partial("users/add_message", {conversation: @conversation}) %>

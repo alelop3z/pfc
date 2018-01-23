@@ -1,0 +1,11 @@
+<div class="form-group">
+	<label for="config_key" class="control-label"><%= Config.human_attribute_name(:key) %></label>
+	<%= text_field :config, :key, placeholder: "Introduzca clave", class: 'form-control', disabled: (@config.new_record? ? false : 'disabled') %>
+</div>
+
+<div class="form-group">
+	<label for="config_value" class="control-label"><%= Config.human_attribute_name(:value) %></label>
+	<%= text_field :config, :value, placeholder: "Introduzca valor", class: 'form-control' %>
+</div>
+
+<%= submit_tag "Guardar", class: "btn btn-default", title: "Guardar" %>

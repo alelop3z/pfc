@@ -1,0 +1,183 @@
+en:
+  users:
+    about_me: About me
+    account: My profile
+    activated: Your profile has been activated. You are a member of our cyclist community. Share your cycle trails, events and make new friends
+    add_friend: Follow
+    add_friend_to: Follow to %{name}
+    albums:
+      message: Albums from %{name}
+      new: New album
+      title: "%{name}'s albums"
+    are_you_sure_unfriendship?: Are you delete your friendship with %{name}?
+    avatar: Photo
+    background_avatar: Background photo
+    birthday: Birthday
+    birthday_less_than_18: You must be at least 18 years
+    change_password: Password
+    close_session: Log out
+    confirmation_password: Confirm your password
+    common_friends: Friends
+    create: Create user
+    create_event: has created the event
+    create_route: has created the cycle trail
+    created: User has been created
+    del_friend: Unfollow
+    del_friend_to: Unfollow %{name}
+    destroyed: User deleted
+    dont_activated: Your user has not been activated, check the email that was sent to the email account you specified during user registration and follow the instructions
+    dont_destroyed: Could not delete the user
+    dont_friends_yet: No friends yet
+    dont_pending_friends: No pending friends
+    edit:
+      edit: Do you need update your data?
+      edit_message: This information appears on your public profile and search results
+      notifications: Update your notifications
+      notifications_message: Customize notifications come to your email
+      password: Password
+      password_message: Change your password
+    email: Email
+    errors:
+      email:
+        uniqueness: There is already a user with this email
+    events:
+      message: All our events
+      title: Events
+    female: Woman
+    fill_fields_login: You must fill in fields email and password
+    fill_fields_remember_password: You must fill email
+    follows:
+      my_follows: Following
+      my_followers: Follow me
+    follows: I follow
+    followers: Look who follows you
+    friendships_invitation_sent: Amistad pendiente de aceptación
+    follows_message: These are users who are following
+    followers_message: Users'll follow you on Bike
+    forget_password?: Are you forget your password?
+    form_create:
+      email: What is your email?
+      name: Insert your name and lastname
+      password: Insert a password. 6 or more characters!
+      remember_my_data: Remember my login on this browser
+    friend_accepted: You has been accepted the friendship
+    friend_removed: You has been removed the friendship
+    friends: Friendships
+    friends_at_veb: friends on voyenbici
+    friendships: Who i follow
+    friendships_invitation_sent: Friendship pending acceptance
+    friendships_message: All those people you're following
+    go_to: View profile of %{name}
+    go_to_wall: View wall of %{name}
+    groups: Groups
+    groups_at_veb: groups on voyenbici
+    group_users: group's users 
+    he_is: has
+    help:
+      about_me: Enter a brief description of yourself
+      email: Remember that your email is your way of access to Voy en Bici
+      name: Your complete name
+      web_page: Do you have a web page? Write URL
+    ignore_friend: Ignore friendship
+    ignore_friend_to: Ignore friendship of 
+    inbox:
+      not_messages_yet: No messages yet
+      not_messages_explication_yet: No messages yet
+    invalid: There is no user with the data entered
+    invitation_friend_sent: Friendship invitation sent
+    invitation_friend_dont_sent: Friendship invitation could be sent
+    log_in: Log in
+    name: Name
+    new: New user
+    new_password: New password
+    notifications: Notifications
+    male: Man
+    mail_remember_password_sent: We've sent an email with a link for you to modify your password
+    # mailer:
+    #   registration_confirmation: VoyEnBici: Registration confirmation
+    #   remember_password: VoyEnBici: Remember password
+    menu:
+      albums: Albums
+      events: Events
+      favorites: My favorites
+      followers: Followers
+      friendships: My friends
+      inbox: Inbox
+      my_albums: My albums
+      my_events: My events
+      my_routes: My cycle trails
+      routes: Cycle trails
+      wall: My wall
+    my_albums:
+      message: All those photos you share
+      new: New album
+      title: My albums
+    my_events:
+      message: All events you've created
+      new: New event
+      title: My events
+    my_favorites:
+      events: Events
+      message: All you saved favorites
+      routes: Cycle trails
+      title: My favorites
+    my_routes:
+      message: Want to ride a bike? Browse over cycle trails that have
+      new: New cycle trail
+      title: Cycle trails
+    old_password: Actual password
+    password: Password
+    password_confirmation: Password confirmation
+    password_has_changed: The password has been updated
+    pending_friends: Friend requests
+    pertain: part of
+    placeholder:
+      about_me: Tell us about yourself
+      email: Insert your email
+      name: Insert your name
+      web_page: "http://"
+    photos: Photos
+    profile:
+      albums: Albums
+      conversation:
+        message: <i class="glyphicon glyphicon-envelope"></i>
+      follow:
+        add: Follow
+        del: Unfollow
+      routes: Cycle trails
+      tweets: Comments
+    remember_my_data: Remember me
+    remember_password: Remember password
+    routes:
+      message: All cycle trails that you have created
+      new: New cycle trail
+      title: My cicle trail
+    search: Search friends
+    search_dont_results_large: Sorry but search returned no results performed
+    search_friends: Search friends
+    search_name_friends: Find friends by name
+    search_more_friends: Find more friends
+    select_sex: Select your gender
+    share: Share
+    show: Show user
+    sign_in: Sign inIniciar sesión
+    sign_up: Sign up
+    sign_up_create_user: Join to Voy en Bici
+    sign_up_new_user: Are you new user? Sign up
+    suggest_friends: Perhaps you know ...
+    surname: Lastname
+    time_said: said at
+    unfriend: Remove from my friends
+    unfriend_user: Remove friendship with %{name}
+    update: Update
+    users: Users
+    videos: Videos
+    view_all_common_friends: View common friendships
+    view_all_friends: View all friendships
+    view_all_suggest_friends: Seeing people who may know
+    visit: Visit to
+    years: years
+    wall: My wall
+    wall_create_route: "%{user_name} shared the <a href=\"%{url}\">%{name}</a> cycle trail"
+    web_page: Web page
+    write_on_wall: Write a comment

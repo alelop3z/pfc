@@ -1,0 +1,28 @@
+<div class="filter">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="form-horizontal">
+	    		<input type="text" class="form-control col-xs-9" placeholder="<%= I18n.t("routes.enter_location") %>" name="route[city]" id="route_city" />
+	    	</div>
+	    </div>
+	</div>
+
+	<div class="row">
+		<div class="difficult col-xs-6">
+			<h3><%= I18n.t("main.difficulty.title") %></h3>
+			<label for="very_easy"><input type="checkbox" value="0" name="very_easy" id="very_easy" <%= "checked=checked" if @difficulty and @difficulty.very_easy == "1" %> /> <%= I18n.t("main.difficulty.very_easy") %></label>
+			<label for="easy"><input type="checkbox" value="1" name="easy" id="easy" <%= "checked=checked" if @difficulty and @difficulty.easy == "1" %> /> <%= I18n.t("main.difficulty.easy") %></label>
+			<label for="normal"><input type="checkbox" value="2" name="normal" id="normal" <%= "checked=checked" if @difficulty and @difficulty.normal == "1" %> /> <%= I18n.t("main.difficulty.normal") %></label>
+			<label for="difficult"><input type="checkbox" value="3" name="difficult" id="difficult" <%= "checked=checked" if @difficulty and @difficulty.difficult == "1" %> /> <%= I18n.t("main.difficulty.difficult") %></label>
+			<label for="very_difficult"><input type="checkbox" value="4" name="very_difficult" id="very_difficult" <%= "checked=checked" if @difficulty and @difficulty.very_difficult == "1" %> /> <%= I18n.t("main.difficulty.very_difficult") %></label>
+		</div>
+
+		<div class="route-types col-xs-6">
+			<h3><%= I18n.t("routes.show.route_type") %></h3>
+			<label for="road"><input type="checkbox" value="6" name="road" id="road" <%= "checked=checked" if @route_type and @route_type.road == "1" %> /> <%= I18n.t("main.route_types.road") %></label>
+			<label for="mtb"><input type="checkbox" value="5" name="mtb" id="mtb" <%= "checked=checked" if @route_type and @route_type.mtb == "1" %> /> <%= I18n.t("main.route_types.mtb") %></label>
+			<label for="bmx"><input type="checkbox" value="0" name="bmx" id="bmx" <%= "checked=checked" if @route_type and @route_type.bmx == "1" %> /> <%= I18n.t("main.route_types.bmx") %></label>
+			<label for="ciclocross"><input type="checkbox" value="1" name="ciclocross" id="ciclocross" <%= "checked=checked" if @route_type and @route_type.ciclocross == "1" %> /> <%= I18n.t("main.route_types.ciclocross") %></label>
+		</div>
+	</div>
+</div>

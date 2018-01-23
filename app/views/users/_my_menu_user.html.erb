@@ -1,0 +1,14 @@
+<ul class="module nav nav-tabs nav-stacked">
+  <li class="<%= "active" if sel == "wall" %>">
+    <%= link_to raw(t("users.wall") + "<i class=\"icon-chevron-right\"></i>"), wall_user_path(@current_user), :class => "list-link", :data => {:id => params[:id], "link-to" => "users#wall", :nav => t("users.wall")} %>
+  </li>
+  <li class="<%= "active" if sel == "routes" %>">
+    <%= link_to raw(t("users.routes") + "<i class=\"icon-chevron-right\"></i>"), routes_user_path(@current_user), :class => "list-link", :data => {:id => params[:id], "link-to" => "users#routes", :nav => t("users.routes")} %>
+  </li>
+  <li class="<%= "active" if sel == "events" %>">
+    <%= link_to raw(t("users.events") + "<i class=\"icon-chevron-right\"></i>"), events_user_path(@current_user), :class => "list-link", :data => {:id => params[:id], "link-to" => "users#events", :nav => t("users.events")} %>
+  </li>
+  <li class="<%= "active" if sel == "photos" %>">
+    <%= link_to raw(t("users.albums") + "<i class=\"icon-chevron-right\"></i>"), albums_user_path(@current_user), :class => "list-link", :data => {:id => params[:id], "link-to" => "users#albums", :nav => t("users.albums")} %>
+  </li>
+</ul>

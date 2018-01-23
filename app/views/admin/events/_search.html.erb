@@ -1,0 +1,37 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+    	<%= link_to raw("<i class=\"fa fa-file-excel-o\"></i>  Descargar Excel"), admin_events_path(format: 'xls'), title: 'Descargar eventos en formato excel', class: 'btn btn-xs btn-default pull-right' %>
+    	<%= link_to raw("<i class=\"fa fa-file\"></i>  Descargar CSV"), admin_events_path(format: 'csv'), title: 'Descargar eventos en formato CSV', class: 'btn btn-xs btn-default pull-right' %>
+        Buscador de eventos
+    </div>
+    <div class="panel-body">
+        <%= form_tag admin_events_path, method: 'get', class: "form-inline" do %>
+			<div class="form-group">
+				<%= label_tag :event_title, "Titulo", class: "sr-only" %> 
+				<%= text_field_tag "event[title]", (params[:event][:title] rescue nil), class: "form-control", placeholder: "Introduzca titulo" %>
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :event_event_type, "Seleccione tipo de evento", class: "sr-only" %>
+				<%= select_tag "event[event_type]", options_for_select(Main.types, (params[:event][:event_type] rescue nil)), prompt: "Introduzca tipo de evento", class: 'form-control' %> 
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :event_private, "¿Evento privado?", class: "sr-only" %>
+				<%= select_tag "event[private]", options_for_select(Main.privacity, (params[:event][:private] rescue nil)), prompt: "Introduzca si es privado o no", class: 'form-control' %> 
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :event_init_at, "Fecha de inicio", class: "sr-only" %> 
+				<%= text_field_tag "event[from]", (params[:event][:from] rescue nil), class: "form-control datepicker", placeholder: "Introduzca fecha inicio" %>
+			</div>
+
+			<div class="form-group">
+				<%= label_tag :event_finish_at, "Fecha de fin", class: "sr-only" %> 
+				<%= text_field_tag "event[to]", (params[:event][:to] rescue nil), class: "form-control datepicker", placeholder: "Introduzca fecha de fin" %>
+			</div>
+
+			<%= submit_tag "Buscar", class: "btn btn-default" %>
+        <% end %>
+    </div>
+</div>

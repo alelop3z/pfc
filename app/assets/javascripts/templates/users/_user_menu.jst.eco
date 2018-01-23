@@ -1,0 +1,36 @@
+<div class="module user-data">
+  <div class="row">
+    <div class="col-lg-3 col-xs-3">
+    <img class="media-object img-circle" src="<%= @user.photo.replace("/detail/", "/list/") %>" alt="<%= @user.name %>" />
+    </div>
+    <div class="col-lg-9 col-xs-9">
+      <h1><%= @user.name %></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3 col-lg-offset-1 col-xs-3 col-xs-offset-3">
+      <span class="title">Sigo a</span><a href="/users/<%= @user.id_to_s %>/follows" data-id="<%= @user.id_to_s %>" data-link-to="users#follows" class="num-elements"><%= @user.follow_ids.length %></a>
+    </div>
+    <div class="col-lg-4 col-xs-4">
+      <span class="title">Me siguen</span><a href="/users/<%= @user.id_to_s %>/followers" data-id="<%= @user.id_to_s %>" data-link-to="users#followers" class="num-elements"><%= @user.follower_ids.length %></a>
+    </div> 
+  </div>
+</div>
+
+<ul class="module nav nav-pills">
+  <li class="<%= "active" if @sel == "wall" %>">
+    <a href="/users/<%= @user.id_to_s %>/wall" data-id="<%= @user.id_to_s %>" data-link-to="users#wall"><%= I18n.t("users.menu.wall") %></a>
+  </li>
+  <li class="<%= "active" if @sel == "inbox" %>">
+    <a href="/users/<%= @user.id_to_s %>/inbox" data-id="<%= @user.id_to_s %>" data-link-to="users#inbox"><%= I18n.t("users.menu.inbox") %> <span class="badge"><%= @user.num_conversations %></span></a>
+  </li>
+  <li class="<%= "active" if @sel == "routes" %>">
+    <a href="/users/<%= @user.id_to_s %>/routes" data-id="<%= @user.id_to_s %>" data-link-to="users#routes"><%= I18n.t("users.menu.my_routes") %><span class="badge"><%= @user.num_routes %></span></a>
+  </li>
+  <li class="<%= "active" if @sel == "events" %>">
+    <a href="/users/<%= @user.id_to_s %>/events" data-id="<%= @user.id_to_s %>" data-link-to="users#events"><%= I18n.t("users.menu.my_events") %><span class="badge"><%= @user.num_events %></span></a>
+  </li>
+  <li class="<%= "active" if @sel == "favorites" %>">
+    <a href="/users/<%= @user.id_to_s %>/favorites" data-id="<%= @user.id_to_s %>" data-type="route" data-link-to="users#favorites"><%= I18n.t("users.menu.favorites") %><span class="badge"><%= @user.num_favorites %></span></a>
+  </li>
+</ul>

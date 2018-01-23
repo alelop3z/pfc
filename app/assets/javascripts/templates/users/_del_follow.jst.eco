@@ -1,0 +1,1 @@
+<a href="/users/<%= @id %>/del_follow" data-id="<%= @id %>" data-link-to="#users#del_follow" class="btn btn-small btn-danger"><%= @safe I18n.t("users.profile.follow.del") %></a>

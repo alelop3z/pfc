@@ -1,0 +1,14 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12 import-url">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>"><span aria-hidden="true">&times;</span></button>
+        <h2><%= I18n.t("comments.mark_as_offensive.title") %></h2>
+        <p><%= @safe I18n.t("comments.mark_as_offensive.explication_ko") %></p>
+        <button type="button" class="btn btn-success pull-right" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>">
+          <%= I18n.t("comments.mark_as_offensive.close_button") %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

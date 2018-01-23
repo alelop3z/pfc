@@ -1,0 +1,10 @@
+es:
+  mongoid:
+    models:
+      contact: contacto
+  attributes:
+    comments: Comentarios
+    email: Email
+    name: Nombre
+    subject: Asunto
+    terms_of_service: Política de privacidad

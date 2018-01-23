@@ -1,0 +1,9 @@
+en:
+  sessions:
+    invalid_mail_or_password: User and / or password are not valids
+    logged_in: You're logged
+    new: Log in on Voy En Bici
+    sign_in:
+      email: Insert your email
+      password: Your password
+      sign_in: Log in

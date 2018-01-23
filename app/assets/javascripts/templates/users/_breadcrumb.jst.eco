@@ -1,0 +1,26 @@
+<% if @conversation: %>
+  <% if @current.id_to_s == @conversation.user_from.id_to_s: %>
+    <% user = @conversation.user_to %>
+  <% else: %>
+    <% user = @conversation.user_from %>
+  <% end %>
+<% end %>
+
+<div class="module">
+  <ol class="breadcrumb">
+    <% if user: %>
+      <li>
+        <a href="/users/<%= @current.id_to_s %>/inbox" data-id="<%= @current.id_to_s %>" data-link-to="users#inbox">
+          <%= I18n.t("breadcrumbs.inbox") %>
+        </a>
+      </li>
+      <li class="active">
+        <%= user.name %>
+      </li>
+    <% else: %>
+      <li class="active">
+        <%= I18n.t("breadcrumbs.inbox") %>
+      </li>
+    <% end %>
+  </ol>
+</div>

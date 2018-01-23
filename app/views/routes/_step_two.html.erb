@@ -1,0 +1,24 @@
+<div class="field">
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</div>
+
+<div class="field">
+  <%= f.label :duration %>
+  <%#= f.text_field :duration %>
+</div>
+
+<div class="field">
+  <%= f.label :description %>
+  <%= f.text_area :description, :rows => 8 %>
+</div>
+
+<div class="field">
+  <%= f.label :difficulty %>
+  <%= f.select :difficulty, Main.difficulty, :prompt => t("routes.form.select_your_difficulty") %>
+</div>
+
+<div class="field">
+  <%= f.label :privacity %>
+  <%= f.select :privacity, Main.privacity, :prompt => t("routes.form.select_your_privacity") %>
+</div>

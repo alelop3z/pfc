@@ -1,0 +1,29 @@
+<h4 class="page-header">Rutas</h4>
+
+<%= render "admin/routes/search" %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Gestión de rutas
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Route.human_attribute_name(:name) %></th>
+                <th><%= Route.human_attribute_name(:route_type) %></th>
+				<th><%= Route.human_attribute_name(:difficulty) %></th>                
+                <th><%= Route.human_attribute_name(:private) %></th>
+                <th><%= Route.human_attribute_name(:created_at) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @routes.each do |route| %>
+                <tr id="route_<%= route._id %>">
+                    <%= render partial: "admin/routes/route", locals: {route: route} %>
+                </tr>
+            <% end %>
+        </table>
+
+        <%= paginate @routes %>
+    </div>
+</div>

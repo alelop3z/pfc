@@ -1,0 +1,24 @@
+<% if @current.id_to_s == @conversation.user_from.id_to_s: %>
+  <% user = @conversation.user_to %>
+<% else: %>
+  <% user = @conversation.user_from %>
+<% end %>
+
+<div class="content" id="conversation_<%= @conversation.id_to_s %>">
+  <div class="media">
+    <a class="pull-left" href="/users/<%= user.id_to_s %>/conversation" data-id="<%= user.id_to_s %>" data-link-to="users#conversation">
+      <img class="media-object img-circle" src="<%= user.avatar.replace("/original/", "/list/") %>" alt="<%= user.name %>" />
+    </a>
+    <div class="media-body">
+      <span>
+        <strong>
+          <a href="/users/<%= user.id_to_s %>/conversation" data-id="<%= user.id_to_s %>" data-link-to="users#conversation">
+            <%= user.name %>
+          </a>
+        </strong>
+        <time class="timeago" datetime="<%= @conversation.last_to_message_at %>"></time>
+      </span>
+      <p><%= @safe @conversation.last_message %></p>
+    </div>
+  </div>
+</div>

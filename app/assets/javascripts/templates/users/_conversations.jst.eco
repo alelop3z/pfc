@@ -1,0 +1,19 @@
+<%= @safe render_partial("users/breadcrumb") %>
+
+<div class="module">
+  <div id="conversations" data-timestamp>
+    <% if @conversations and @conversations.length > 0: %>
+      <% for conversation in @conversations: %>
+        <% if conversation.last_message: %>
+          <%= @safe render_partial("users/conversation", {conversation: conversation, current: @current}) %>
+        <% end %>
+      <% end %>
+    <% else: %>
+      <div class="content content-header">
+        <h2>No dispones de conversaciones</h2>
+        <p class="subheader">Quizás quieras contactar con alguna de las personas que sigues</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+

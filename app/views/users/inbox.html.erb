@@ -1,0 +1,5 @@
+<%= content_for :scripts do %>
+  <script type="text/javascript">
+    window.users.inbox({id: "<%= @user.id_to_s %>"});
+  </script>
+<% end %>

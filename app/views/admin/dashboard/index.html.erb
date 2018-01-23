@@ -1,0 +1,91 @@
+<h4 class="page-header">Gestión privada</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Últimos comentarios
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Comment.human_attribute_name(:text) %></th>
+                <th><%= Comment.human_attribute_name(:user) %></th>
+       			<th><%= Comment.human_attribute_name(:created_at) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @comments.each do |comment| %>
+                <tr id="comment_<%= comment._id %>" class="<%= "alert alert-danger" if comment.is_offensive? %>">
+                    <%= render partial: "admin/comments/comment", locals: {comment: comment} %>
+                </tr>
+            <% end %>
+        </table>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Últimos usuarios
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= User.human_attribute_name(:name) %></th>
+				<th><%= User.human_attribute_name(:email) %></th>                
+                <th><%= User.human_attribute_name(:created_at) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @users.each do |user| %>
+                <tr id="user_<%= user._id %>">
+                    <%= render partial: "admin/users/user", locals: {user: user} %>
+                </tr>
+            <% end %>
+		</table>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Últimas rutas
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Route.human_attribute_name(:name) %></th>
+                <th><%= Route.human_attribute_name(:type) %></th>
+				<th><%= Route.human_attribute_name(:difficulty) %></th>                
+                <th><%= Route.human_attribute_name(:private) %></th>
+                <th><%= Route.human_attribute_name(:created_at) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @routes.each do |route| %>
+                <tr id="route_<%= route._id %>">
+                    <%= render partial: "admin/routes/route", locals: {route: route} %>
+                </tr>
+            <% end %>
+		</table>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Últimos eventos
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Event.human_attribute_name(:name) %></th>
+                <th><%= Event.human_attribute_name(:type) %></th>
+                <th><%= Event.human_attribute_name(:init_date) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @events.each do |event| %>
+                <tr id="event_<%= event._id %>">
+                    <%= render partial: "admin/events/event", locals: {event: event} %>
+                </tr>
+            <% end %>
+		</table>
+    </div>
+</div>

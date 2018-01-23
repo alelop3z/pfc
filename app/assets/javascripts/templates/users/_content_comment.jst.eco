@@ -1,0 +1,36 @@
+<div class="media">
+  <a class="pull-left" data-link-to="users#wall" data-id="<%= @comment.user_id_to_s %>" href="/users/<%= @comment.user_id_to_s %>/wall">
+    <img class="media-object img-circle" src="<%= @comment.from.image.replace("/detail/", "/list/") %>" alt="<%= @comment.from.name %>" />
+  </a>
+  
+  <div class="media-body">
+    <% if @current.id_to_s == @comment.user_id_to_s: %>
+      <a href="/comments/<%= @comment.id_to_s %>/destroy_comment" data-link-to=""
+    <% end %>
+
+    <span>
+      <strong>
+        <a data-link-to="users#wall" data-id="<%= @comment.user_id_to_s %>"  href="/users/<%= @comment.user_id_to_s %>/wall" class="user-name">
+          <%= @comment.from.name %>
+        </a>
+      </strong>
+      <time class="timeago" datetime="<%= @comment.created_at %>"></time>
+    </span>
+    <p><%= @comment.text %></p>
+
+    <% if @current.id_to_s.length > 0: %>
+      <div class="col-sm-12">
+        <a href="/comments/<%= @comment.id_to_s %>/mark_as_offensive" class="offensive" data-link-to="#comments#mark_as_offensive" data-id="<%= @comment.id_to_s %>" data-mark-as-offensive="<%= I18n.t("main.buttons.mark_as_offensive") %>">
+          <img src="/assets/comunes/ofensivo.png" style="width:16px;" />
+        </a>
+
+        <% if @current.id_to_s == @comment.user_id_to_s: %>
+          <div class="pull-right">
+            <a href="/comments/<%= @comment.id_to_s %>/edit" class="btn btn-sm btn-info" data-link-to="#comments#edit" data-id="<%= @comment.id_to_s %>"><%= @safe I18n.t("main.buttons.edit") %></a>
+            <a href="/comments/<%= @comment.id_to_s %>" class="btn btn-sm btn-danger" data-link-to="#comments#destroy" data-id="<%= @comment.id_to_s %>"><%= @safe I18n.t("main.buttons.destroy") %></a>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

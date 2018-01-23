@@ -1,0 +1,37 @@
+<div class="content" id="comment_<%= comment.id %>">
+    <div class="media">
+        <%= link_to image_tag(comment.from.image, :alt => comment.from.name, :class => "avatar"), user_path(comment.user_id_from), :title => t("users.go_to", :name => comment.from.name), :class => "pull-left" %>
+        <div class="media-body">
+      <span class="pull-right time" data-time="<%= comment.created_at.to_i %>"><%= time_ago_in_words(comment.created_at) %></span>
+      <%= link_to content_tag("strong", comment.from.name), user_path(comment.user_id_from), :title => t("users.go_to", :name => comment.from.name), :class => "block" %>
+      <p><%= raw comment.text %></p>
+
+      <div class="block">
+        <%= link_to t("comments.open"), open_comment_user_path(comment), :remote => true, :title => t("comments.open_comment"), :class => "open" %>
+        <%= link_to t("comments.close"), close_comment_user_path(comment), :remote => true, :title => t("comments.close_comment"), :class => "close-comment" %>
+        <%= link_to t("comments.answer"), answer_comment_user_path(comment), :remote => true, :title => t("comments.answer_comment"), :class => "answer" %>
+        <%= link_to t("comments.send_by_mail"), send_comment_by_email_user_path(comment), :remote => true, :title => t("comments.send_by_mail_comment"), :class => "send-mail" %>
+      </div>
+
+      <div id="comments_content" class="margin-top margin-bottom hidden">
+        <div class="media bg-color-grey">
+          <%= form_tag(add_answer_to_comments_user_path(@user, :user_id_to => params[:id], :comment_id => comment.id), :remote => true, :method => :post, :class => "form-inline") do %>
+            <%= text_area "comment[#{comment.id}]", (params[:comment]["#{comment.id}"] rescue nil), :class => "span26 comment", :rows => 4, :placeholder => t("comments.insert_your_comment") %>
+            <%= submit_tag t("comments.publish_it"), :class => "btn btn-warning pull-right" %>
+          <% end %>
+        </div>
+        <div id="answers" style="display:none;">
+          <% comment.answers.each do |a| %>
+            <div class="media">
+              <%= link_to image_tag(a.from.image, :alt => a.from.name), user_path(a.user_id_from), :title => t("users.go_to", :name => a.from.name), :class => "pull-left" %>
+              <div class="media-body">
+                <p><%= link_to a.from.name, user_path(a.user_id_from), :title => t("users.go_to", :name => a.user_id_from.name) %> <%= t("users.time_said") %> <%= a.created_at.strftime("%d-%m-%Y %H:%M") %>
+                <p><%= raw a.text %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

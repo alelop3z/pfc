@@ -1,0 +1,17 @@
+<div class="module user-info acenter">
+  <% if @user.photo: %>
+    <a href="/users/<%= @user.id_to_s %>/wall" data-id="<%= @user.id_to_s %>" data-link-to="users#wall" title="<%= @user.name %>" class="avatar">
+      <img src="<%= @user.photo %>" alt="<%= @user.name %>" title="<%= @user.name %>" />
+    </a>
+  <% end %>
+  <h1>
+    <a href="/users/<%= @user.id_to_s %>/wall" data-id="<%= @user.id_to_s %>" data-link-to="users#wall" title="<%= @user.name %>">
+      <%= @user.name %>
+    </a>
+  </h1>
+  <% if @user.summary: %>
+    <p>%= @user.summary %></p>
+  <% end %>
+</div>
+
+<%= @safe render_partial("routes/near_routes", {routes: @routes}) %>

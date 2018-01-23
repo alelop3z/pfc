@@ -1,0 +1,46 @@
+@import "../framework/variables";
+@import "../framework/mixins";
+
+/***********
+*  HEADER  *
+***********/
+
+.bs-docs-nav {
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, .1);
+    }
+
+SECTION#content{
+    margin-top:70px;
+    }
+
+
+/**************************
+*  SOBREESCRIBIR ESTILOS  *
+**************************/
+.btn-warning{
+  background:#ff4621;
+  border-color:#fd5d3d;
+  &:hover{
+    background:#fd5d3d;
+    border-color:#fe5d3d;
+    }
+  }
+
+/**************************
+* ESTILOS DE AUTOCOMPLETE *
+**************************/
+.ui-autocomplete {
+  z-index: 1051;
+  }
+  .ui-menu-item IMG{
+    margin:0 5px 0 0;
+    }
+
+/***********************
+* ESTILOS MIGAS DE PAN *
+***********************/
+.breadcrumb{
+  background:transparent;
+  margin:0;
+  }

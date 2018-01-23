@@ -1,0 +1,121 @@
+@import "../framework/variables";
+@import "../framework/mixins";
+
+.object-info{
+  .object-info-top{
+    background:asset-url('comunes/background-veb.jpg') center center no-repeat;
+    background-size:cover;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    min-height:180px;
+    height:auto!important;
+    height:180px;
+    padding:40px 0;
+    text-align:center;
+
+    H1{
+      color:#FFF;
+      font-size:18px;
+      line-height:24px;
+      margin:10px 0;
+      padding:0 15%;
+      text-shadow:1px 2px 2px #000;
+      }
+    }
+  .object-info-bottom{
+    background:#FFF;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    clear:both;
+    color:#000;
+    padding:10px 0;
+
+    &::after,
+    &::before{
+      content:'';
+      display:table;
+      }
+    &::after{
+      clear:both;
+      }
+
+    TABLE TH{
+      color:#8899A6;
+      padding-left:10px;
+      text-transform:uppercase;
+      }
+    TABLE TD{
+      padding-left:10px;
+      }
+    TABLE TH:first-child,
+    TABLE TD:first-child{
+      padding-left:0;
+      }
+    }
+  }
+
+.acenter{
+  text-align:center;
+  }
+
+.module .avatar{
+  float: left;
+  margin-bottom:-16px;
+  position:relative;
+  @include transform(translate(0, -50%));
+  width: 100%;
+  IMG{
+    float: none;
+    border: 3px solid $background_header;
+    @include border-radius(5px);
+    width: 48px;
+    height: 48px;
+    }
+  }
+
+.module.user-info{
+  H1 A{
+    color:$background_header;
+    font-size:1em;
+    }
+  }
+
+.ui-autocomplete IMG,
+.user-data IMG.media-object{
+  max-width:48px;
+  }
+
+.user-image{
+  position:relative;
+
+  &.uploading IMG{
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+    }
+
+  #progress{
+    @include border-radius(5px);
+    -moz-transform:translate(-50%, -50%);
+    -ms-transform:translate(-50%, -50%);
+    -o-transform:translate(-50%, -50%);
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    background:#bbbbbb;
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:60%;
+    z-index:2;
+
+    .bar{
+      @include border-radius(5px);
+      height:15px;
+      background:#FF4621;
+      }
+    }
+
+  IMG{
+    cursor:pointer;
+    width:100%;
+    }
+  }

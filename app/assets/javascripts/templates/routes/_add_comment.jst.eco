@@ -1,0 +1,13 @@
+<div class="module">
+  <div class="content-module">
+    <form class="form-inline post-user" method="post" id="add-comment" action="/routes/<%= @route.id_to_s %>/add_comment" data-id="<%= @route.id_to_s %>" data-link-to="routes#add_comment">
+      <div class="form-group col-xs-10 post">
+        <label class="sr-only" for="comment"></label>
+        <textarea type="text" id="comment" name="comment" class="form-control" autocomplete="off" placeholder="<%= I18n.t("comments.want_to_make_a_comment?") %>"></textarea>
+      </div>
+      
+      <input type="submit" value="<%= I18n.t("main.buttons.publish") %>" class="btn btn-warning pull-right" />
+      <span class="remaining hidden" data-length-remaining="255" data-count="255"></span>
+    </form>
+  </div>
+</div>

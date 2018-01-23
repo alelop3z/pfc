@@ -1,0 +1,10 @@
+en:
+  mongoid:
+    models:
+      contact: contact
+  attributes:
+    comments: Comments
+    email: Email
+    name: Name
+    subject: Subject
+    terms_of_service: Terms of service

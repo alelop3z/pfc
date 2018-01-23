@@ -1,0 +1,49 @@
+en:
+  events:
+    address: 
+      presence: <p>Enter the address of the event</p>
+    comment:
+      created: Event %{name} has been created
+      sharing: Event %{name} has been shared
+    destroy:
+      are_you_sure?: Are you sure? The event data can't be restored
+    edit:
+      edit_message: Update your event data
+      title: Edit event
+    enter_location: Enter location
+    event_type:
+      presence: <p>Indicates the type of event</p>
+    fields:
+      address: Address
+      allow_comments: Allow comments
+      description: Description
+      difficulty: Difficulty
+      event_type: Event type
+      init_date: Date
+      name: Name
+      private: Private event
+      ready: ¿Visible?
+      summary: Summary
+      url: Event URL
+    index:
+      message: All events
+      new: New event
+      title: Event's list
+    init_date:
+      presence: <p>What date is the event??</p>
+      invalid_date: <p>Enter a valid date</p>
+    new:
+      title: New event
+    show:
+      add_favorite: Add to favorites
+      address: Address
+      difficulty: Difficulty
+      distance: Distance
+      download:
+        icon: <i class="glyphicon glyphicon-download-alt"></i>
+        title: Download
+      duration: Duration
+      edit: Edit event
+      event_type: Event's type
+      locale_init_date: Date
+      title: Event %{name}

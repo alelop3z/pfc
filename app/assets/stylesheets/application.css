@@ -1,0 +1,25 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require reset
+ *= require_tree ./bootstrap
+ *= require bootstrap-datetimepicker
+ *= require gmaps4rails
+ *= require_tree ./carousel
+ *= require framework/jquery-ui-1.10.4.custom
+ *= require framework/cspinner
+ *= require_tree ./application
+ *= require font.awesome
+ */
+
+BODY{
+	font-family:'Roboto', sans-serif;
+	}

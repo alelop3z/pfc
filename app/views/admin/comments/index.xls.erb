@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="Sheet1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">Identificador</Data></Cell>
+        <Cell><Data ss:Type="String">Comentario</Data></Cell>
+        <Cell><Data ss:Type="String">Usuario</Data></Cell>
+      </Row>
+      <% @comments.each do |_comment| %>
+        <Row>
+          <Cell><Data ss:Type="String"><%= _comment._id.to_s %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _comment.text %></Data></Cell>
+          <Cell><Data ss:Type="String"><%= _comment.user.name %> (<%= _comment.user.email %>)</Data></Cell>
+        </Row>
+      <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>
+

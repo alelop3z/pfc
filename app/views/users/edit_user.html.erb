@@ -1,0 +1,5 @@
+<%= content_for :scripts do %>
+  <script type="text/javascript">
+    window.users.edit_user({id: "<%= params[:id] || current_user.id_to_s %>"});
+  </script>
+<% end %>

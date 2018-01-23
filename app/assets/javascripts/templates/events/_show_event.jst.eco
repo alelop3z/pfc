@@ -1,0 +1,38 @@
+<div class="module content">
+  <div class="object-info">
+    <div>
+      <h1 class="col-xs-12"><%= @event.name %></h1>
+      <div id="map" style='width: 100%; min-height: 395px;'></div>
+    </div>
+    <div class="object-info-bottom">
+      <div class="col-sm-7">
+        <table>
+          <% if @event.address: %>
+            <tr>
+              <th><%= I18n.t("events.show.address") %></th>
+              <td><%= @event.address %></td>
+            </tr>
+          <% end %>
+          <% if @event.get_event_type: %>
+            <tr>
+              <th><%= I18n.t("events.show.event_type") %></th>
+              <td><%= @event.get_event_type %></td>
+            </tr>
+          <% end %>
+          <% if @event.locale_init_date: %>
+            <tr>
+              <th><%= I18n.t("events.show.locale_init_date") %></th>
+              <td><%= @event.locale_init_date %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+      <div class="col-sm-4 col-sm-offset-1 aright">
+        <% if @current.id_to_s == @user.id_to_s: %>
+          <a href="/events/<%= @event.id_to_s %>/edit" class="btn btn-mini btn-info hidden-xs" data-link-to="events#edit" data-id="<%= @event.id_to_s %>"><%= I18n.t("main.edit") %></a>
+          <a href="/events/<%= @event.id_to_s %>" class="btn btn-sm btn-danger" data-link-to="#events#destroy_event" data-id="<%= @event.id_to_s %>"><%= @safe I18n.t("main.buttons.destroy") %></a>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

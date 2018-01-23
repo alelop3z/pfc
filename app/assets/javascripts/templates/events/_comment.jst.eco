@@ -1,0 +1,18 @@
+<div class="content" id="comment_<%= @comment.id %>">
+  <div class="media">
+    <a class="pull-left" href="/users/<%= @comment.user_id_to_s %>/wall">
+      <img class="media-object" src="<%= @comment.from.image.replace("/detail/", "/list/") %>" alt="<%= @comment.from.name %>" />
+    </a>
+    <div class="media-body">
+      <span>
+        <strong>
+          <a href="/users/<%= @comment.user_id_to_s %>/wall">
+            <%= @comment.from.name %>
+          </a>
+        </strong>
+        <time class="timeago" datetime="<%= @comment.created_at %>"></time>
+      </span>
+      <p><%= @comment.text %></p>
+    </div>
+  </div>
+</div>

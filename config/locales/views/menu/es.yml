@@ -1,0 +1,33 @@
+es:
+  menu:
+    administracion: Opciones de administración
+    conversations: <span class='glyphicon glyphicon-envelope'></span>
+    edit_user: Editar mis datos de usuario
+    events: <span class='glyphicon glyphicon-calendar'></span>
+    go_to:
+      administracion: Administración
+      albums: Albums
+      edit_user: Editar mis datos
+      events: Ver los nuevos eventos
+      home: Ir a mi muro
+      logout: Cerrar mi sesión de usuario
+      messages: Ir a mi mensajeria
+      my_friends: Ir a mis amigos
+      my_profile: Ir a mi perfil
+      my_wall: Ver mi muro
+      own: Ir a mi usuario
+      routes: Ver las rutas
+      search: Ir a búsqueda de usuarios
+    home: <span class='glyphicon glyphicon-home'></span>
+    logout: Cerrar sesión
+    logout_mobi: <span class='glyphicon glyphicon-off'></span>
+    messages: Mensajería
+    my_account: Mi cuenta
+    my_friends: <span class='glyphicon glyphicon-user'></span>
+    my_profile: <span class='glyphicon glyphicon-cog'></span> <span class='caret'></span>
+    my_wall: Mi muro
+    own: Mi usuario
+    publish: <span class='glyphicon glyphicon-comment'></span>
+    routes: <span class='glyphicon glyphicon-map-marker'></span>
+    search: <span class='glyphicon glyphicon-search'></span>
+    voy_en_bici: Voy en bici

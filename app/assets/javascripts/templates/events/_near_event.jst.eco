@@ -1,0 +1,14 @@
+<div class="media">
+  <a class="pull-left" href="/events/<%= @event.id_to_s %>" data-id="<%= @event.id_to_s %>" data-link-to="events#show">
+    <img class="media-object" src="<%= @event.static_image %>" alt="<%= @event.name %>" />
+  </a>
+  <div class="media-body">
+    <span>
+      <strong>
+        <a href="/events/<%= @event.id_to_s %>" data-id="<%= @event.id_to_s %>" data-link-to="events#show">
+          <%= @event.name %>
+        </a>
+      </strong>
+    </span>
+  </div>
+</div>

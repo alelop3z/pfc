@@ -1,0 +1,56 @@
+<div class="col-md-12">	
+	<button type="button" class="close" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>"><span aria-hidden="true">&times;</span></button>
+	<h3><%= raw t("contacts.header_mail") %></h3>
+	<%= raw t("contacts.header_text") %>
+	<%= form_tag(send_contact_contacts_path, :method => :post, data: {remote: true}) do %>
+		<div id="error-explanation" style="display:none;"></div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="contact_name" class="control-label required"><%= Contact.human_attribute_name(:name) %></label>
+					<%= text_field :contact, :name, class: 'form-control' %>
+				</div>
+			</div>
+
+			<div class="col-md-6">
+				<div class="form-group">
+					<label for="contact_email" class="control-label required"><%= Contact.human_attribute_name(:email) %></label>
+					<%= text_field :contact, :email, class: 'form-control' %>
+				</div>	
+			</div>
+		</div>
+	      
+	    <div class="row">
+	    	<div class="col-md-12">
+				<div class="form-group">
+					<label for="contact_subject" class="control-label required"><%= Contact.human_attribute_name(:subject) %></label>
+					<%= text_field :contact, :subject, class: 'form-control' %>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label for="contacto_comments" class="control-label required"><%= Contact.human_attribute_name(:comments) %></label>
+					<%= text_area :contact, :comments, class: 'form-control' %>
+				</div>
+			</div>
+		</div>
+	        
+	    <div class="row">
+	    	<div class="col-md-9 contact-privacy-policy">
+	    		<div class="form-group">
+					<label for="contacto_terms_of_service" class="checkbox"><%= check_box :contacto, :terms_of_service %> <%= raw t("contacts.accept_privacy_policy", :link => "/pagina/aviso-legal") %></label>
+	    		</div>
+	    	</div>
+
+	    	<div class="col-md-3">
+				<div class="form-group buttons pull-right">
+					<%= submit_tag t("contacts.send"), :title => t("contacts.send"), class: 'btn btn-mini btn-success' %>
+				</div>
+			</div>
+		</div>
+	<% end %>
+</div>

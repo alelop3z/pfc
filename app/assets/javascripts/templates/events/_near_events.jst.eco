@@ -1,0 +1,7 @@
+<div class="module">
+  <div class="content">
+    <% for event in @events: %>
+      <%= @safe render_partial("events/near_event", {event: event}) %>
+    <% end %>
+  </div>
+</div>

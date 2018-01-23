@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="module col-md-12">
+        <div class="content-header">
+          <div class="header-inner">
+            <h2><%= I18n.t("events.edit.title") %></h2>
+            <p class="subheader"><%= I18n.t("events.edit.edit_message") %></p>
+          </div>
+        </div>
+        <div class="content">
+          <form name="edit-route" action="/events/<%= @event.id_to_s %>" data-id="<%= @event.id_to_s %>" data-link-to="#events#update" method="put">
+            <%= @safe render_partial("events/form", event: @event) %>
+
+            <button type="submit" class="btn btn-success pull-right margin-bottom">
+              <%= I18n.t("main.update") %>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

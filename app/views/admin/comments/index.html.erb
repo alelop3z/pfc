@@ -1,0 +1,27 @@
+<h4 class="page-header">Comentarios</h4>
+
+<%= render "admin/comments/search" %>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Gestión de comentarios
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Comment.human_attribute_name(:text) %></th>
+                <th><%= Comment.human_attribute_name(:user) %></th>
+                <th><%= Comment.human_attribute_name(:created_at) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @comments.each do |comment| %>
+                <tr id="comment_<%= comment._id %>" class="<%= "alert alert-danger" if comment.is_offensive? %>">
+                    <%= render partial: "admin/comments/comment", locals: {comment: comment} %>
+                </tr>
+            <% end %>
+        </table>
+
+        <%= paginate @comments %>
+    </div>
+</div>

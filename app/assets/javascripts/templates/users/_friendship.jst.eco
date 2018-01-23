@@ -1,0 +1,26 @@
+<div class="content" id="friendship_<%= @friendship.id_to_s %>">
+  <div class="media">
+    <a class="pull-left" href="/users/<%= @friendship.id_to_s %>/wall">
+      <img class="media-object img-circle" src="<%= @friendship.photo.replace("/large/", "/list/") %>" alt="<%= @friendship.name %>" />
+    </a>
+    <div class="media-body">
+      <div class="col-sm-7">
+        <span>
+          <strong>
+            <a href="/users/<%= @friendship.id_to_s %>/wall" data-id="<%= @friendship.id_to_s %>" data-link-to="users#wall">
+              <%= @friendship.name %>
+            </a>
+          </strong>
+        </span>
+        <p><%= @friendship.about_me %></p>
+      </div>
+      <div class="col-sm-4 col-sm-offset-1 aright" id="follow_<%= @friendship.id_to_s %>">
+        <% if @user.follow_ids.indexOf(@friendship.id_to_s) > -1: %>
+          <%= @safe render_partial("users/del_follow", {id: @friendship.id_to_s}) %>
+        <% else: %>
+          <%= @safe render_partial("users/add_follow", {id: @friendship.id_to_s}) %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="module">
+  <div class="content-header">
+    <div class="header-inner">
+      <h2><%= t("users.follows.my_follows") %></h2>
+    </div>
+  </div>
+  <div class="content-module">
+    <ul class="media-list">
+      <% follows.each do |_follow| %>
+          <li class="media" id="follow_<%= _follow.id %>">
+            <%= link_to image_tag(_follow.avatar.url(:thumb), :title => t("users.go_to_wall", :name => _follow.name, :class => "media-object avatar size32"), :alt => t("users.go_to_wall", :name => _follow.name), :class => "avatar"), wall_user_path(_follow), :title => t("users.go_to_wall", :name => _follow.name), :class => "pull-left size32" %>
+            <div class="media-body">
+              <strong class="fullname"><%= link_to _follow.name, wall_user_path(_follow), :title => t("users.go_to_wall", :name => _follow.name) %></strong>
+              <span class="fullname subheader"><%= link_to t("users.unfriend"), unfriendship_user_path(_follow), :remote => true, :data => {:id => _follow.id_to_s, "link-to" => "users#unfriendship"}, :title => t("users.unfriend_user", :name => _follow.name), :confirm => t("users.are_you_sure_unfriendship?", :name => _follow.name), :method => :put %></span>
+            </div>
+          </li>
+      <% end %>
+      <li class="media">
+        <%= link_to t("users.search_more_friends"), search_friends_users_path, :title => t("users.search_friends"), :class => "pull-right muted small" %>
+      </li>
+    </ul>
+  </div>
+</div>

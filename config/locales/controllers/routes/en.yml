@@ -1,0 +1,9 @@
+en:
+  routes:
+    create:
+      created: Cycle trail has been created
+      error_created: There was a problem when creating the cycle trail. Check the format and content of the file.
+    destroy:
+      destroyed: Cycle trail has been destroyed 
+    update:
+      updated: Cycle trail has been updated

@@ -1,0 +1,45 @@
+en:
+  routes:
+    comment:
+      created: Cycle trail %{name} has benn created
+      sharing: Cycle trail %{name} has been shared
+    destroy:
+      are_you_sure?: Are you sure ? If remove the cycle trail the data can't been restored
+    edit:
+      edit_message: Update the cycle trail data
+      title: Edit cycle trail
+    enter_location: Enter location
+    fields:
+      allow_comments: Allow comments
+      description: Description
+      difficulty: Difficulty
+      name: Name
+      private: Private cycle trail
+      ready: ¿Visible?
+      route_type: Cycle trail type
+    index:
+      message: All cycle trails
+      new: New cycle trail
+      title: Cycle trails list
+    new:
+      file:
+        button: Add your cycle trail
+        explication: Upload your cycle trail with GPX file and shared it with your followers
+        title: It is less to create your cycle trail!
+      import_url:
+        button: Import
+        explication: Insert a cycle trail URL and we import all cycle trail information. You'll can update the data.
+        text_field: Paste URL like "http://es.wikiloc.com/wikiloc/view.do?id=4350383"
+        title: Easier impossible! Publish your cycle trail with one clic.
+      title: New cycle trail
+    show:
+      add_favorite: Add to favorites
+      difficulty: Difficulty
+      distance: Distance
+      download:
+        icon: <i class="glyphicon glyphicon-download-alt"></i>
+        title: Download
+      duration: Duration
+      edit: Edit cycle trail
+      route_type: Cycle trail type
+      title: Cycle trail %{name}

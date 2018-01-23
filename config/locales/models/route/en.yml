@@ -1,0 +1,14 @@
+en:
+  mongoid:
+    models:
+      route: cycle trail
+    attributes:
+      route:
+        allow_comments: Allow comments
+        description: Description
+        difficulty: Fifficulty
+        gpx_file: GPX File
+        name: Name
+        private: Private Cycle trail
+        ready: Ready
+        type: Cycle trail type

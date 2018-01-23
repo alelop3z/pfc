@@ -1,0 +1,16 @@
+<% if session[:user_id] %>
+    <div class="usuario span40">
+      <div class="buzon">
+        <a href="#" title="Ver mensajería interna">Buzón (3)</a>
+      </div>
+      <div class="cuenta">
+        <%= link_to t("users.account"), {:controller => :users, :action => :account, :id => session[:user_id]}, :title => t("users.account") %>
+      </div>
+      <div class="notificaciones">
+        <a href="#" title="Ver 3 notificaciones">3 notificaciones</a>
+      </div>
+      <div class="cerrar_session">
+        <%= link_to t("users.close_session"), {:controller => :sessions, :action => :destroy}, :title => t("users.close_session") %>
+      </div>
+    </div>
+<% end %>

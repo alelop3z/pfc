@@ -1,0 +1,187 @@
+es:
+  users:
+    about_me: Sobre mí
+    account: Cuenta
+    activated: Tu usuario ha sido activado con éxito. Ya puedes formar parte de nuestra comunidad de ciclistas en la que compartir tu información, crear y compartir nuevas rutas y hacer nuevos amigos con los que pedalear
+    add_friend: Seguir
+    add_friend_to: Seguir información de %{name}
+    albums:
+      message: Los albums de %{name}
+      new: Nuevo álbum
+      title: Álbumes de %{name}
+    are_you_sure_unfriendship?: ¿Estás seguro de eliminar tu amistad con %{name}
+    avatar: Foto
+    background_avatar: Foto de fondo
+    birthday: Fecha de nacimiento
+    birthday_less_than_18: Tienes que tener al menos 18 años
+    change_password: Contraseña
+    close_session: Cerrar Sesión
+    confirmation_password: Confirmar contraseña
+    common_friends: Amigos comunes
+    create: Crear usuario
+    create_event:  ha creado el evento
+    create_route:  ha creado la ruta
+    created: Usuario creado
+    del_friend: Dejar de seguir
+    del_friend_to: Dejar de seguir a %{name}
+    destroyed: Usuario eliminado
+    dont_activated: Tu usuario no ha podido ser activado, comprueba el email que se ha enviado a la cuenta de correo que especifiscaste durante el registro de usuario y sigue las instrucciones que se indican
+    dont_destroyed: No se ha podido eliminar el usuario
+    dont_friends_yet: Aún no tienes amigos
+    dont_pending_friends: No hay solicitudes de amistad pendientes
+    edit:
+      edit_message: Ésta información aparece en tu perfil público y resultados de búsqueda
+      notifications: Cambia tus notificaciones
+      notifications_message: Modifica las notificaciones que llegarán a tu cuenta de correo
+      password: Contraseña
+      password_message: Cambia tu contraseña
+      title: ¿Necesitas cambiar tus datos?
+    email: Correo electrónico
+    errors:
+      email:
+        uniqueness: Ya hay un usuario con este email
+    events:
+      message: Todos los eventos de los que disponemos
+      title: Eventos
+    female: Mujer
+    fields:
+      about_me: Información que quieras compartir con otros usuarios
+      email: Tu email para acceder
+      image: Una imagen tuya
+      name: Tu nombre
+      web_page: ¿Tienes página web? Compartela con nosotros
+    fill_fields_login: Debe rellenar los campos de email y contraseña
+    fill_fields_remember_password: Debe rellenar el email
+    follows:
+      my_follows: Siguiendo
+      my_followers: Siguiéndome
+    forget_password?: ¿Has olvidado tu contraseña?
+    form_create:
+      email: ¿Cuál es tu correo electrónico?
+      name: Introduce tu nombre y apellidos
+      password: Introduce una contraseña. ¡6 caracteres o más!
+      remember_my_data: Mantenerme conectado en este navegador
+    friend_accepted: Has aceptado la solicitud de amistad
+    friend_removed: Has eliminado a este usuario de tus amistades
+    friends: Amigos
+    friends_at_veb: amigos en voyenbici
+    follows: A quien sigo
+    followers: Mira quién te sigue
+    friendships_invitation_sent: Amistad pendiente de aceptación
+    follows_message: Estos son los usuarios que estás siguiendo
+    followers_message: Los usuarios de Voy en Bici que te siguen 
+    go_to: Ver perfil de %{name}
+    go_to_wall: Ver el muro de %{name}
+    groups: Grupos
+    groups_at_veb: grupos en voyenbici
+    group_users: usuarios en el grupo
+    he_is: tiene
+    help:
+      about_me: Introduce una breve descripción tuya
+      email: Recuerda que tu email es tu forma de acceso a Voy en Bici
+      name: Tu nombre completo
+      web_page: ¿Tienes una página web? Pon aquí su dirección
+    ignore_friend: Ignorar amistad
+    ignore_friend_to: Ignorar la amistad de
+    inbox:
+      not_messages_yet: Sin conversaciones
+      not_messages_explication_yet: No tienes ninguna conversación
+    invalid: No existe ningún usuario con los datos introducidos
+    invitation_friend_sent: Invitacion de amistad enviada
+    invitation_friend_dont_sent: Invitacion de amistad no pudo ser enviada
+    log_in: Entrar
+    name: Nombre
+    new: Nuevo usuario
+    new_password: Nueva contraseña
+    notifications: Notificaciones
+    male: Hombre
+    mail_remember_password_sent: Te hemos enviado un correo electrónico con un enlace para que modifiques tu contraseña
+    mailer:
+      registration_confirmation: "VoyEnBici: Confirmación de registro"
+      remember_password: "VoyEnBici: Recordar contraseña"
+    menu:
+      administracion: Opciones de administración
+      albums: Álbums
+      events: Eventos
+      favorites: Mis favoritos
+      followers: Mis seguidores
+      friendships: Mis amigos
+      inbox: Mensajes
+      my_albums: Mis álbums
+      my_events: Mis eventos
+      my_routes: Mis rutas
+      routes: Rutas
+      wall: Mi muro
+    my_albums:
+      message: Todas esas fotos que compartes
+      new: Nuevo álbum
+      title: Mis albumes
+    my_events:
+      message: Todos los eventos que has creado
+      new: Nuevo evento
+      title: Mis eventos
+    my_favorites:
+      events: Eventos
+      message: Todos los favoritos que has guardado
+      routes: Rutas
+      title: Mis favoritos
+    my_routes:
+      message: ¿Quieres andar en bici? Busca entre las rutas que disponemos
+      new: Nueva ruta
+      title: Rutas
+    old_password: Contraseña actual
+    password: Contraseña
+    password_confirmation: Confirmación de contraseña
+    password_has_changed: La contraseña ha sido modificada correctamente
+    pending_friends: Solicitudes de amistad
+    pertain: forma parte de
+    placeholder:
+      about_me: Danos información sobre ti
+      email: Introduce tu email
+      name: Introduce tu nombre
+      web_page: "http://"
+    photos: Fotos
+    profile:
+      albums: Albums
+      conversation:
+        message: <i class="glyphicon glyphicon-envelope"></i>
+      follow:
+        add: Seguir
+        del: Dejar de seguir
+      routes: Rutas
+      tweets: Comentarios
+    remember_my_data: Recordar mis datos
+    remember_password: Recordar contraseña
+    routes:
+      message: Todas las rutas que has creado
+      new: Nueva ruta
+      title: Mis rutas
+    search: Búsqueda de amigos
+    search_dont_results_large: Lo sentimos pero la busqueda realizada no ha devuelto resultados
+    search_friends: Buscar amigos
+    search_name_friends: Busca el nombre de tus amigos
+    search_more_friends: Buscar más amigos
+    select_sex: Seleccione su sexo
+    share: Compartir
+    show: Mostrar usuario
+    sign_in: Iniciar sesión
+    sign_up: Regístrate
+    sign_up_create_user: Únete a Voy en Bici
+    sign_up_new_user: ¿Eres nuevo? Regístrate
+    suggest_friends: Tal vez conozcas ...
+    surname: Apellidos
+    time_said: dijo a las
+    unfriend: Eliminar de mis amigos
+    unfriend_user: Eliminar amistad con %{name}
+    update: Guardar cambios
+    users: Usuarios
+    videos: Videos
+    view_all_common_friends: Ver todos los amigos comunes
+    view_all_friends: Ver todos los amigos
+    view_all_suggest_friends: Ver a gente que tal vez conozcas
+    visit: Visita a
+    years: años
+    wall: Mi muro
+    wall_create_route: "%{user_name} ha compartido la siguiente ruta <a href=\"%{url}\">%{name}</a> en su muro"
+    web_page: Página web
+    write_on_wall: Escribe en el muro

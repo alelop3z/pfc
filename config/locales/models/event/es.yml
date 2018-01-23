@@ -1,0 +1,14 @@
+es:
+  mongoid:
+    models:
+      event: evento
+    attributes:
+      event:
+        address: Dirección
+        description: Descripción
+        init_date: Fecha de inicio
+        name: Nombre
+        private: Evento privado
+        summary: Resumen
+        type: Tipo de evento
+        url: URL del evento

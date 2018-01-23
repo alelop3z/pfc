@@ -1,0 +1,35 @@
+<div class="content" id="event_<%= @event.id_to_s %>">
+  <img src="<%= @event.ico_event_type.icon %>" class="ico-route-type" alt="<%= @event.ico_event_type_description %>" />
+  <div class="media">
+    <a class="pull-left" href="/events/<%= @event.id_to_s %>" data-link-to="events#show" data-id="<%= @event.id_to_s %>">
+      <img class="media-object" src="<%= @event.static_image %>" alt="<%= @event.name %>" />
+    </a>
+    <div class="media-body">
+      <span>
+        <strong>
+          <a href="/events/<%= @event.id_to_s %>" data-link-to="events#show" data-id="<%= @event.id_to_s %>">
+            <%= @event.name %>
+          </a>
+        </strong>
+        <time class="timeago"><%= @event.locale_init_date %></time>
+      </span>
+      <p class="address"><%= @event.address %></p>
+      <p><%= @safe @event.summary %></p>
+
+      <% if @current.id_to_s.length > 0: %>
+        <div class="col-sm-12">
+          <a class="star <% if @current.event_favorites.indexOf(@event.id_to_s) != -1: %>favorite<% end %>" href="/users/<%= @event.id_to_s %>/add_favorite?type=event" data-link-to="#users#add_favorite" data-id="<%= @event.id_to_s %>" data-type="event" data-favorite="<%= I18n.t("main.buttons.add_favorite_text") %>" data-unfavorite="<%= I18n.t("main.buttons.remove_favorite_text") %>">
+            <img src="/assets/comunes/favorito.png" />
+          </a>
+
+          <% if @current.id_to_s == @event.user_id_to_s: %>
+            <div class="pull-right">
+              <a href="/events/<%= @event.id_to_s %>/edit" class="btn btn-sm btn-info hidden-xs" data-link-to="events#edit" data-id="<%= @event.id_to_s %>"><%= @safe I18n.t("main.buttons.edit") %></a>
+              <a href="/events/<%= @event.id_to_s %>" class="btn btn-sm btn-danger" data-link-to="#events#destroy_event" data-id="<%= @event.id_to_s %>"><%= @safe I18n.t("main.buttons.destroy") %></a>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

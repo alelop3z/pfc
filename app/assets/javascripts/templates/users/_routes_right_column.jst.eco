@@ -1,0 +1,15 @@
+<div class="module">
+  <div id="routes" data-timestamp>
+    <div class="content content-header">
+      <a href="/routes/new" data-link-to="#routes#new" data-modal="true" class="btn btn-mini btn-success pull-right">
+        <%= I18n.t("users.my_routes.new") %>
+      </a>
+      <h2><%= I18n.t("users.my_routes.title") %></h2>
+      <p class="subheader"><%= I18n.t("users.my_routes.message") %></p>
+    </div>
+
+    <% for route in @routes: %>
+      <%= @safe render_partial("routes/route", {current: @current, route: route}) %>
+    <% end %>
+  </div>
+</div>

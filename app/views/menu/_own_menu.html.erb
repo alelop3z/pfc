@@ -1,0 +1,17 @@
+<li class="dropdown">
+  <%= link_to raw(t("menu.my_profile")), "#", :title => t("menu.go_to.my_profile"), :class => "dropdown-toggle", :data => {:toggle => "dropdown"}, :id => "own-menu" %>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="own-menu">
+    <% if current_user.admin? %>
+      <li>
+        <%= link_to t("menu.administracion"), admin_dashboard_index_path, :title => t("menu.go_to.administracion") %>
+      </li>
+    <% end %>
+    <li>
+      <%= link_to t("menu.edit_user"), edit_user_user_path(current_user), :title => t("menu.go_to.edit_user"), :data => {"id" => current_user.id_to_s, "link-to" => "users#edit_user"} %>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <%= link_to t("menu.logout"), destroy_user_session_path, :method => :delete, :title => t("menu.go_to.logout") %>
+    </li>
+  </ul>
+</li>

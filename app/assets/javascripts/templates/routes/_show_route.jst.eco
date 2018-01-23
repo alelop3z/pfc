@@ -1,0 +1,54 @@
+<div class="module content">
+  <div class="object-info">
+    <div class="map-detail">
+      <h1 class="col-xs-12"><%= @route.name %></h1>
+      <div id="map" style='width: 100%; min-height: 395px;'></div>
+      <!--<div id="chart"></div>-->
+      <canvas id="chart"></canvas>
+    </div>
+    <div class="object-info-bottom">
+      <div class="col-sm-7">
+        <table>
+          <tr>
+            <% if @route.distance: %>
+              <th><%= I18n.t("routes.show.distance") %></th>
+            <% end %>
+            <% if @route.get_route_type: %>
+              <th><%= I18n.t("routes.show.route_type") %></th>
+            <% end %>
+            <% if @route.get_duration: %>
+              <th><%= I18n.t("routes.show.duration") %></th>
+            <% end %>
+            <% if @route.get_difficulty: %>
+              <th><%= I18n.t("routes.show.difficulty") %></th>
+            <% end %>
+          </tr>
+          <tr>
+            <% if @route.distance: %>
+              <td><%= @route.distance %></td>
+            <% end %>
+            <% if @route.get_route_type: %>
+              <td><%= @route.get_route_type %></td>
+            <% end %>
+            <% if @route.get_duration: %>
+              <td><%= @route.get_duration %></td>
+            <% end %>
+            <% if @route.get_difficulty: %>
+              <td><%= @route.get_difficulty %></td>
+            <% end %>
+          </tr>
+        </table>
+      </div>
+      <div class="col-sm-4 col-sm-offset-1 aright">
+        <% if @current.id_to_s == @user.id_to_s: %>
+          <a href="/routes/<%= @route.id_to_s %>/edit" class="btn btn-mini btn-info hidden-xs" data-link-to="routes#edit" data-id="<%= @route.id_to_s %>"><%= I18n.t("main.edit") %></a>
+          <a href="/routes/<%= @route.id_to_s %>" class="btn btn-sm btn-danger" data-link-to="#routes#destroy_route" data-id="<%= @route.id_to_s %>"><%= @safe I18n.t("main.buttons.destroy") %></a>
+        <% else: %>
+          <% if @current.name.length > 0: %>
+            <a href="/routes/<%= @route.id_to_s %>/download" class="btn btn-mini btn-success"><%= @safe I18n.t("routes.show.download.icon") %></a>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

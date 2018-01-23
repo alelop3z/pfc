@@ -1,0 +1,48 @@
+<div class="span12">
+  <%= render :partial => "my_menu_user", :locals => {:sel => "photos"} %>
+</div>
+
+<div class="span30 offset2">
+  <div class="module">
+    <div class="content-module">
+      <%= form_tag(comment_wall_user_path(@user, :user_id_to => params[:id]), :method => :post, :remote => true, :class => "form-inline") do %>
+          <%= text_field_tag :comment, params[:comment], :class => "comment span24", :placeholder => t("comments.insert_your_comment") %>
+          <%= submit_tag t("comments.publish_it"), :class => "btn btn-warning" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="module">
+    <div id="comments">
+      <% @comments.each do |comment| %>
+          <div class="content">
+            <div class="media">
+              <%= link_to image_tag(comment.user_id_from_image, :alt => comment.user_id_from_name), user_path(comment.user_id_from), :title => t("users.go_to", :name => comment.user_id_from_name), :class => "pull-left" %>
+              <div class="media-body">
+                <p><%= link_to comment.user_id_from_name, user_path(comment.user_id_from), :title => t("users.go_to", :name => comment.user_id_from_name) %> <%= t("users.time_said") %> <%= comment.created_at.strftime("%d-%m-%Y %H:%M") %></p>
+                <p><%= raw comment.text %></p>
+                <div id="comments_<%= comment.id %>">
+                  <% comment.answers.each do |a| %>
+                      <div class="media">
+                        <%= link_to image_tag(a.user_id_from_image, :alt => a.user_id_from_name), user_path(a.user_id_from), :title => t("users.go_to", :name => a.user_id_from_name), :class => "pull-left" %>
+                        <div class="media-body">
+                          <p><%= link_to a.user_id_from_name, user_path(a.user_id_from), :title => t("users.go_to", :name => a.user_id_from_name) %> <%= t("users.time_said") %> <%= a.created_at.strftime("%d-%m-%Y %H:%M") %>
+                          <p><%= raw a.text %></p>
+                        </div>
+                      </div>
+                  <% end %>
+                </div>
+                <div class="media">
+                  <%= form_tag(add_answer_to_comments_user_path(@user, :user_id_to => params[:id], :comment_id => comment.id), :remote => true, :method => :post, :class => "form-inline") do %>
+                      <%= text_field_tag "comment[#{comment.id}]", (params[:comment]["#{comment.id}"] rescue nil), :class => "input-large comment", :placeholder => t("comments.insert_your_comment") %>
+                      <%= submit_tag t("comments.publish_it"), :class => "btn btn-warning" %>
+                  <% end %>
+                </div>
+              </div>
+            </div>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+

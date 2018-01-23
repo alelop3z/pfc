@@ -1,0 +1,68 @@
+<div class="alert alert-danger hidden"></div>
+
+<div class="form-group">
+  <label for="route_name"><%= I18n.t("routes.fields.name") %>: </label>
+  <input type="text" name="route[name]" class="form-control" id="route_name" value="<%= @route.name %>" />
+</div>
+
+<div class="form-group">
+  <label for="route_description"><%= I18n.t("routes.fields.description") %>: </label>
+  <textarea name="route[description]" class="form-control" rows="6" id="route_description"><%= @route.description %></textarea>
+</div>
+
+<div class="form-group map-editor">
+  <div id="map"></div>
+  <input name="route_city" id="route_city" class="form-control" />
+  <div id="points" style="display:none;"></div>
+</div> 
+
+<div class="col-xs-6">
+  <div class="form-group">
+    <label for="route_type"><%= I18n.t("routes.fields.route_type") %>: </label>
+    <select name="route[route_type]" id="route_route_type" class="form-control">
+      <option value=""><%= I18n.t("main.route_types.prompt") %></option>
+      <option value="6" <%= "selected=selected" if @route.route_type == 6 %>><%= I18n.t("main.route_types.road") %></option>
+      <option value="5" <%= "selected=selected" if @route.route_type == 5 %>><%= I18n.t("main.route_types.mtb") %></option>
+      <option value="0" <%= "selected=selected" if @route.route_type == 0 %>><%= I18n.t("main.route_types.bmx") %></option>
+      <option value="1" <%= "selected=selected" if @route.route_type == 1 %>><%= I18n.t("main.route_types.ciclocross") %></option>
+    </select>
+  </div>
+</div>
+
+<div class="col-xs-6">
+  <div class="form-group">
+    <label for="route_difficulty"><%= I18n.t("routes.fields.difficulty") %>: </label>
+    <select name="route[difficulty]" id="route_difficulty" class="form-control">
+      <option value=""><%= I18n.t("main.difficulty.prompt") %></option>
+      <option value="0" <%= "selected=selected" if @route.difficulty == 0 %>><%= I18n.t("main.difficulty.very_easy") %></option>
+      <option value="1" <%= "selected=selected" if @route.difficulty == 1 %>><%= I18n.t("main.difficulty.easy") %></option>
+      <option value="2" <%= "selected=selected" if @route.difficulty == 2 %>><%= I18n.t("main.difficulty.normal") %></option>
+      <option value="3" <%= "selected=selected" if @route.difficulty == 3 %>><%= I18n.t("main.difficulty.difficult") %></option>
+      <option value="4" <%= "selected=selected" if @route.difficulty == 4 %>><%= I18n.t("main.difficulty.very_difficult") %></option>
+    </select>
+  </div>
+</div>
+
+<div class="col-xs-6">
+  <div class="form-group">
+    <label for="route_allow_comments">
+      <input type="hidden" name="route[allow_comments]" value="false" />
+      <input type="checkbox" name="route[allow_comments]" id="route_allow_comments" value="true" <%= "checked=checked" if @route.is_commentable == "1" %>>
+      <%= I18n.t("routes.fields.allow_comments") %>
+    </label>
+  </div>
+</div>
+
+<div class="col-xs-6">
+  <div class="form-group">
+    <label for="route_private">
+      <input type="hidden" name="route[private]" value="false" />
+      <input type="checkbox" name="route[private]" id="route_private" value="true" <%= "checked=checked" if @route.is_private == "1" %>>
+      <%= I18n.t("routes.fields.private") %>
+    </label>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-success pull-right margin-bottom save-route">
+  <%= I18n.t("main.update") %>
+</button>

@@ -1,0 +1,30 @@
+en:
+  menu:
+    admininistracion: Administration
+    conversations: <span class='glyphicon glyphicon-envelope'></span>
+    edit_user: Edit my profile
+    events: <span class='glyphicon glyphicon-calendar'></span>
+    go_to:
+      administracion: Administration
+      albums: Albums
+      edit_user: Edit my profile
+      events: View events
+      home: Go to my wall
+      logout: Close session
+      messages: Go to inbox
+      my_friends: Go to friends
+      my_profile: My profile
+      my_wall: My wall
+      own: My profile
+      routes: View cycle trails
+    home: <span class='glyphicon glyphicon-home'></span>
+    logout: Close session
+    messages: Inbox
+    my_account: My profile
+    my_friends: <span class='glyphicon glyphicon-user'></span>
+    my_profile: <span class='glyphicon glyphicon-cog'></span> <span class='caret'></span>
+    my_wall: Wall
+    own: My profile
+    publish: <span class='glyphicon glyphicon-comment'></span>
+    routes: <span class='glyphicon glyphicon-map-marker'></span>
+    voy_en_bici: Voy en bici

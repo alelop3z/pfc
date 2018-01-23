@@ -1,0 +1,266 @@
+mongod --help for help and startup options
+2014-10-21T22:32:47.477+0200 [initandlisten] MongoDB starting : pid=671 port=27017 dbpath=/data/db 64-bit host=Alejandros-iMac.local
+2014-10-21T22:32:47.477+0200 [initandlisten] db version v2.6.5
+2014-10-21T22:32:47.477+0200 [initandlisten] git version: nogitversion
+2014-10-21T22:32:47.477+0200 [initandlisten] build info: Darwin Alejandros-iMac.local 14.0.0 Darwin Kernel Version 14.0.0: Fri Sep 19 00:26:44 PDT 2014; root:xnu-2782.1.97~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2014-10-21T22:32:47.477+0200 [initandlisten] allocator: tcmalloc
+2014-10-21T22:32:47.477+0200 [initandlisten] options: {}
+2014-10-21T22:32:47.488+0200 [initandlisten] journal dir=/data/db/journal
+2014-10-21T22:32:47.488+0200 [initandlisten] recover : no journal files present, no recovery needed
+2014-10-21T22:32:47.635+0200 [initandlisten] waiting for connections on port 27017
+2014-10-21T22:33:47.648+0200 [clientcursormon] mem (MB) res:33 virt:2654
+2014-10-21T22:33:47.648+0200 [clientcursormon]  mapped (incl journal view):160
+2014-10-21T22:33:47.648+0200 [clientcursormon]  connections:0
+2014-10-21T22:38:47.830+0200 [clientcursormon] mem (MB) res:33 virt:2654
+2014-10-21T22:38:47.830+0200 [clientcursormon]  mapped (incl journal view):160
+2014-10-21T22:38:47.830+0200 [clientcursormon]  connections:0
+2014-10-21T22:43:48.032+0200 [clientcursormon] mem (MB) res:33 virt:2654
+2014-10-21T22:43:48.032+0200 [clientcursormon]  mapped (incl journal view):160
+2014-10-21T22:43:48.033+0200 [clientcursormon]  connections:0
+2014-10-21T22:48:48.217+0200 [clientcursormon] mem (MB) res:33 virt:2654
+2014-10-21T22:48:48.217+0200 [clientcursormon]  mapped (incl journal view):160
+2014-10-21T22:48:48.217+0200 [clientcursormon]  connections:0
+150311 22:40:30 [Warning] Setting lower_case_table_names=2 because file system for /usr/local/var/mysql/ is case insensitive
+150311 22:40:30 [Note] InnoDB: Using mutexes to ref count buffer pool pages
+150311 22:40:30 [Note] InnoDB: The InnoDB memory heap is disabled
+150311 22:40:30 [Note] InnoDB: Mutexes and rw_locks use GCC atomic builtins
+150311 22:40:30 [Note] InnoDB: Memory barrier is not used
+150311 22:40:30 [Note] InnoDB: Compressed tables use zlib 1.2.5
+150311 22:40:31 [Note] InnoDB: Using CPU crc32 instructions
+150311 22:40:31 [Note] InnoDB: Initializing buffer pool, size = 128.0M
+150311 22:40:31 [Note] InnoDB: Completed initialization of buffer pool
+150311 22:40:31 [Note] InnoDB: Highest supported file format is Barracuda.
+150311 22:40:45 [Note] InnoDB: 128 rollback segment(s) are active.
+150311 22:40:45 [Note] InnoDB: Waiting for purge to start
+150311 22:40:45 [Note] InnoDB:  Percona XtraDB (http://www.percona.com) 5.6.22-72.0 started; log sequence number 4327820
+150311 22:40:46 [Note] Server socket created on IP: '::'.
+150311 22:40:50 [Note] Event Scheduler: Loaded 0 events
+150311 22:40:52 [Note] mysqld: ready for connections.
+Version: '10.0.17-MariaDB'  socket: '/tmp/mysql.sock'  port: 3306  Homebrew
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] MongoDB starting : pid=945 port=27017 dbpath=/data/db 64-bit host=Alejandros-iMac.local
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] db version v3.0.0
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] git version: nogitversion
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] build info: Darwin miniyosemite.local 14.1.0 Darwin Kernel Version 14.1.0: Mon Dec 22 23:10:38 PST 2014; root:xnu-2782.10.72~2/RELEASE_X86_64 x86_64 BOOST_LIB_VERSION=1_49
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] allocator: system
+2015-03-11T22:41:09.012+0100 I CONTROL  [initandlisten] options: {}
+2015-03-11T22:41:09.033+0100 W -        [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2015-03-11T22:41:09.078+0100 I JOURNAL  [initandlisten] journal dir=/data/db/journal
+2015-03-11T22:41:09.078+0100 I JOURNAL  [initandlisten] recover begin
+2015-03-11T22:41:09.079+0100 I JOURNAL  [initandlisten] recover lsn: 438450
+2015-03-11T22:41:09.079+0100 I JOURNAL  [initandlisten] recover /data/db/journal/j._0
+2015-03-11T22:41:09.080+0100 I JOURNAL  [initandlisten] recover skipping application of section seq:0 < lsn:438450
+2015-03-11T22:41:09.145+0100 I JOURNAL  [initandlisten] recover cleaning up
+2015-03-11T22:41:09.145+0100 I JOURNAL  [initandlisten] removeJournalFiles
+2015-03-11T22:41:09.145+0100 I JOURNAL  [initandlisten] recover done
+2015-03-11T22:41:09.459+0100 I JOURNAL  [durability] Durability thread started
+2015-03-11T22:41:09.459+0100 I JOURNAL  [journal writer] Journal writer thread started
+2015-03-11T22:41:10.067+0100 I NETWORK  [initandlisten] waiting for connections on port 27017
+2015-03-11T22:42:03.629+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:49558 #1 (1 connection now open)
+2015-03-11T23:10:59.003+0100 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:50488 #2 (2 connections now open)
+
+Status information:
+
+Current dir: /usr/local/var/mysql/
+Running threads: 0  Stack size: 294912
+Current locks:
+lock: 0x7f842b219a28:
+
+lock: 0x7f842a077188:
+
+lock: 0x7f84290b0188:
+
+lock: 0x7f842a86a388:
+
+lock: 0x7f842a865f88:
+
+lock: 0x7f842909e388:
+
+lock: 0x7f8429831188:
+
+lock: 0x7f8429099188:
+
+lock: 0x7f842a86b388:
+
+lock: 0x7f842980a588:
+
+lock: 0x7f842902ed88:
+
+lock: 0x1078bb7a0:
+
+lock: 0x1078bb6a8:
+
+lock: 0x1078ba538:
+
+lock: 0x1078ba440:
+
+lock: 0x1078ba348:
+
+lock: 0x1078ba728:
+
+lock: 0x1078b8638:
+
+lock: 0x1078bb5b0:
+
+lock: 0x1078b8df8:
+
+lock: 0x1078b90e0:
+
+lock: 0x1078b8d00:
+
+lock: 0x1078b8fe8:
+
+lock: 0x1078b8c08:
+
+lock: 0x1078b8ef0:
+
+lock: 0x1078b96b0:
+
+lock: 0x1078b95b8:
+
+lock: 0x1078b94c0:
+
+lock: 0x1078b8b10:
+
+lock: 0x1078b8828:
+
+lock: 0x1078b8a18:
+
+lock: 0x1078b8730:
+
+lock: 0x1078b8920:
+
+lock: 0x1078b93c8:
+
+lock: 0x1078b92d0:
+
+lock: 0x1078b91d8:
+
+lock: 0x1078bb1d0:
+
+lock: 0x1078bb4b8:
+
+lock: 0x1078bb3c0:
+
+lock: 0x1078bb2c8:
+
+lock: 0x1078badf0:
+
+lock: 0x1078bacf8:
+
+lock: 0x1078bac00:
+
+lock: 0x1078bab08:
+
+lock: 0x1078baa10:
+
+lock: 0x1078bafe0:
+
+lock: 0x1078ba918:
+
+lock: 0x1078ba820:
+
+lock: 0x1078baee8:
+
+lock: 0x1078ba630:
+
+lock: 0x1078ba158:
+
+lock: 0x1078ba250:
+
+lock: 0x1078ba060:
+
+lock: 0x1078b9f68:
+
+lock: 0x1078b9b88:
+
+lock: 0x1078b9e70:
+
+lock: 0x1078b9d78:
+
+lock: 0x1078b9a90:
+
+lock: 0x1078b9c80:
+
+lock: 0x1078b9998:
+
+lock: 0x1078b98a0:
+
+lock: 0x1078b97a8:
+
+lock: 0x1078bb0d8:
+
+
+Key caches:
+default
+Buffer_size:     134217728
+Block_size:           1024
+Division_limit:        100
+Age_threshold:         300
+Partitions:              0
+blocks used:             0
+not flushed:             0
+w_requests:              0
+writes:                  0
+r_requests:              0
+reads:                   0
+
+
+handler status:
+read_key:            0
+read_next:           0
+read_rnd             0
+read_first:          0
+write:               0
+delete               0
+update:              0
+
+Table status:
+Opened tables:          0
+Open tables:           63
+Open files:            24
+Open streams:           0
+
+Alarm status:
+Active alarms:   0
+Max used alarms: 0
+Next alarm time: 0
+
+
+
+Events status:
+LLA = Last Locked At  LUA = Last Unlocked At
+WOC = Waiting On Condition  DL = Data Locked
+
+Event scheduler status:
+State      : INITIALIZED
+Thread id  : 0
+LLA        : n/a:0
+LUA        : n/a:0
+WOC        : NO
+Workers    : 0
+Executed   : 0
+Data locked: NO
+
+Event queue status:
+Element count   : 0
+Data locked     : NO
+Attempting lock : NO
+LLA             : init_queue:140
+LUA             : init_queue:150
+WOC             : NO
+Next activation : never
+2015-03-11T23:28:09.753+0100 I NETWORK  [conn1] end connection 127.0.0.1:49558 (1 connection now open)
+2015-03-11T23:28:09.758+0100 I NETWORK  [conn2] end connection 127.0.0.1:50488 (0 connections now open)
+150311 23:28:24 [Note] mysqld: Normal shutdown
+
+150311 23:28:24 [Note] Event Scheduler: Purging the queue. 0 events
+150311 23:28:24 [Note] InnoDB: FTS optimize thread exiting.
+150311 23:28:24 [Note] InnoDB: Starting shutdown...
+150311 23:28:25 [Note] InnoDB: Shutdown completed; log sequence number 4327830
+150311 23:28:25 [Note] mysqld: Shutdown complete
+
+2015-04-12T21:45:17.895+0200 E NETWORK  [initandlisten] listen(): bind() failed errno:48 Address already in use for socket: 0.0.0.0:27017
+2015-04-12T21:45:17.915+0200 E NETWORK  [initandlisten]   addr already in use
+2015-04-12T21:45:17.915+0200 W -        [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2015-04-12T21:45:17.961+0200 I STORAGE  [initandlisten] exception in initAndListen: 98 Unable to lock file: /data/db/mongod.lock errno:35 Resource temporarily unavailable. Is a mongod instance already running?, terminating
+2015-04-12T21:45:17.961+0200 I CONTROL  [initandlisten] dbexit:  rc: 100

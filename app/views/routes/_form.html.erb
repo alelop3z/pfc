@@ -1,0 +1,8 @@
+<%= form_for(@route, :multipart => true) do |f| %>
+  <%= render :partial => "shared/error_messages", :locals => {:target => @route} %>
+  <%= render :partial => "#{f.object.steps[f.object.current_step]}", :locals => {:f => f} %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

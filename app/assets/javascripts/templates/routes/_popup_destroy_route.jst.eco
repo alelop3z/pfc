@@ -1,0 +1,17 @@
+<div class="modal-dialog">
+  <div class="modal-content col-md-12">
+    <div class="modal-body row">
+      <div class="col-md-12">
+        <button type="button" class="close" data-dismiss="modal" aria-label="<%= I18n.t("main.close") %>"><span aria-hidden="true">&times;</span></button>
+        <h2><%= I18n.t("routes.destroy.title", name: @route.name) %></h2>
+        <p><%= I18n.t("routes.destroy.explication") %></p>
+        <form action="/routes/#{@route.id_to_s}/confirm_destroy_route" data-link-to="#routes#confirm_destroy_route" data-id="<%= @route.id_to_s %>" class="form-inline row" method="post">
+
+          <button type="submit" class="btn btn-success pull-right">
+            <%= I18n.t("routes.destroy.button") %>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

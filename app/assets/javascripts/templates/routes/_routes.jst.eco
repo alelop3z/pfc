@@ -1,0 +1,12 @@
+<div class="module">
+  <div id="routes" data-timestamp>
+    <div class="content content-header">
+      <h2><%= I18n.t("routes.index.title") %></h2>
+      <p class="subheader"><%= I18n.t("routes.index.message") %></p>
+    </div>
+
+    <% for route in @routes: %>
+      <%= @safe render_partial("routes/route", {current: @current, route: route}) %>
+    <% end %>
+  </div>
+</div>

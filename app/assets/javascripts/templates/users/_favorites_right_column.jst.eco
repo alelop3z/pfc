@@ -1,0 +1,38 @@
+<div class="module">
+  <div id="favorites" data-timestamp>
+    <div class="content content-header">
+      <h2><%= I18n.t("users.my_favorites.title") %></h2>
+      <p class="subheader"><%= I18n.t("users.my_favorites.message") %></p>
+
+      <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="favorites" class="<% if @type == "route": %>active<% end %>">
+            <a href="#routes" data-link-to="users#favorites" data-id="<%= @user.id_to_s %>" data-type="route" aria-controls="route" role="tab" data-toggle="tab"><%= I18n.t("users.my_favorites.routes") %></a>
+          </li>
+          <li role="favorites" class="<% if @type == "event": %>active<% end %>">
+            <a href="#profile" data-link-to="users#favorites" data-id="<%= @user.id_to_s %>" data-type="event"  aria-controls="event" role="tab" data-toggle="tab"><%= I18n.t("users.my_favorites.events") %></a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane <% if @type == "route": %>active<% end %>" id="routes">
+            <% if @type == "route": %>
+              <% for route in @objects: %>
+                <%= @safe render_partial("routes/route", {current: @current, route: route}) %>
+              <% end %>
+            <% end %>            
+          </div>
+          <div role="tabpanel" class="tab-pane <% if @type == "event": %>active<% end %>" id="events">
+            <% if @type == "event": %>
+              <% for event in @objects: %>
+                <%= @safe render_partial("events/event", {current: @current, event: event}) %>
+              <% end %>
+            <% end %>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

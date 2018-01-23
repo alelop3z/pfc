@@ -1,0 +1,11 @@
+<ul class="module nav nav-tabs nav-stacked">
+  <li class="<%= "active" if sel == "profile" %>">
+    <%= link_to raw(t("users.profile.perfil")), edit_user_user_path(@current_user), :class => "list-link", :data => {:nav => t("users.profile")} %>
+  </li>
+  <li class="<%= "active" if sel == "password" %>">
+    <%= link_to raw(t("users.change_password")), edit_password_user_path(@current_user), :class => "list-link", :data => {:nav => t("users.change_password")} %>
+  </li>
+  <li class="<%= "active" if sel == "notifications" %>">
+    <%= link_to raw(t("users.notifications")), edit_notifications_user_path(@current_user), :class => "list-link", :data => {:nav => t("users.notifications")} %>
+  </li>
+</ul>

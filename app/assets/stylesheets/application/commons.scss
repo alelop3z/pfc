@@ -1,0 +1,157 @@
+@import "../framework/variables";
+@import "../framework/mixins";
+
+.clearfix{
+	clear:both;
+	float:left;
+	margin-top:15px;
+	width:100%;
+	}
+
+#error-explanation UL{
+	padding-left:1em;
+	}
+
+.module.user-data{
+	padding:0 0 15px;
+
+	H1,
+	H1 A{
+		color:#000;
+		font-family:'Roboto', sans-serif;
+		font-size:20px;
+		line-height:1.2em;
+		margin-bottom:20px;
+		}
+
+	.media-object{
+		margin:10px 0 5px 10px;
+		}
+
+	SPAN.title{
+		color:grey;
+		display:block;
+		font-family:Verdana,sans-serif;
+		font-size:11px;
+		line-height:1em;
+		margin-bottom:4px;
+		text-align:center;
+		text-transform:uppercase;
+		}
+
+	A.num-elements{
+		color:#FF4621;
+		display:block;
+		font-family:'Roboto', sans-serif;
+		font-size:22px;
+		line-height:1em;
+		text-align:center;
+		}
+	}
+
+.media-body .user-name{
+	font-size:15px;
+	line-height:22px;
+	}
+
+.media-body .col-sm-12{
+	padding-left:5px;
+	}
+
+.star{
+	@include transition(all 0.3s ease-in-out);
+
+	&:after{
+		content:attr(data-favorite);
+		display:inline-block;
+		font-size:.9em;
+		line-height:1em;
+		margin:0 0 0 4px;
+		}
+
+	IMG,
+	&.favorite:hover IMG{
+		float:left;
+		-webkit-filter: grayscale(100%); 
+		filter: grayscale(100%);
+		}
+
+	&:hover IMG,
+	&.favorite IMG{
+		-webkit-filter: grayscale(0); 
+		filter: grayscale(0);
+		}
+
+	&.favorite:after{
+		content:attr(data-unfavorite);
+		}
+	}
+
+.filter{
+	padding:5px 15px;
+
+	H3{
+		font-size:14px;
+		}
+
+	LABEL{
+		display:block;
+		font-size:12px;
+		font-weight:300;
+		}	
+	}
+
+.offensive{
+	@include transition(all 0.3s ease-in-out);
+
+	&:after{
+		content:attr(data-mark-as-offensive);
+		display:inline-block;
+		font-size:.9em;
+		line-height:1em;
+		margin:0 0 0 4px;
+		}
+
+	IMG{
+		float:left;
+		margin-top:4px;
+		-webkit-filter: grayscale(100%); 
+		filter: grayscale(100%);
+		}
+
+	&:hover IMG{
+		-webkit-filter: grayscale(0); 
+		filter: grayscale(0);
+		}
+	}
+
+@media(max-width:480px){
+	html {
+		position: relative;
+		min-height: 100%;
+		}
+
+	BODY{
+		margin-bottom:40px;
+		}
+
+	#footer-menu-mobile{
+		position:fixed;
+		box-shadow: 0 -3px 0 rgba(0, 0, 0, 0.1);
+		display:table !important;
+	  	bottom:0;
+	  	width:100%;
+	  	height:40px;
+	  	background-color:#FF4621;
+
+	  	A{
+	  		color:#FFF;
+			text-align:center;
+			vertical-align:center;
+			display:table-cell;
+			height:40px;
+			padding-top:9px;
+			border-left:1px solid #DD4621;
+	  		}
+		}
+	}

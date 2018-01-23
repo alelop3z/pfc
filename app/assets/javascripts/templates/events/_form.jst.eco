@@ -1,0 +1,66 @@
+<div class="alert alert-danger hidden"></div>
+
+<div class="form-group">
+  <label for="event_name" data-required="true"><%= I18n.t("events.fields.name") %>: </label>
+  <input type="text" name="event[name]" class="form-control" id="event_name" value="<%= @event.name %>" data-required="true" />
+</div>
+
+<div class="form-group">
+  <label for="event_summary"><%= I18n.t("events.fields.summary") %>: </label>
+  <textarea name="event[summary]" class="form-control" rows="3" id="event_summary"><%= @event.summary %></textarea>
+</div>
+
+<div class="form-group">
+  <label for="event_description" data-required="true"><%= I18n.t("events.fields.description") %>: </label>
+  <textarea name="event[description]" class="form-control" rows="6" id="event_description" data-required="true"><%= @event.description %></textarea>
+</div>
+
+<div class="form-group">
+  <label for="event_init_date" data-required="true"><%= I18n.t("events.fields.init_date") %></label>
+  <input class="form-control datepicker" type="text" name="event[init_date]" id="event_init_date" value="<%= @event.locale_init_date %>" data-required="true">
+</div>
+
+<div class="form-group">
+  <label for="event_url"><%= I18n.t("events.fields.url") %></label>
+  <input class="form-control" type="text" name="event[url]" id="event_url" value="<%= @event.url %>">
+</div>
+
+
+<div class="form-group map-editor">
+  <div id="map"></div>
+  <input name="event_city" id="event_city" class="form-control" />
+  <input type="hidden" name="event[latitude]" id="event_latitude" value="<%= @event.latitude %>" />
+  <input type="hidden" name="event[longitude]" id="event_longitude" value="<%= @event.longitude %>" />
+</div> 
+
+<div class="form-group">
+  <label for="event_address" data-required="true"><%= I18n.t("events.fields.address") %></label>
+  <input class="form-control" type="text" name="event[address]" id="event_address" value="<%= @event.address %>" data-required="true">
+</div>
+
+<div class="form-group">
+  <label for="event_type" data-required="true"><%= I18n.t("events.fields.event_type") %>: </label>
+  <select name="event[event_type]" id="event_event_type" class="form-control" data-required="true">
+    <option value=""><%= I18n.t("main.event_types.prompt") %></option>
+    <option value="6" <%= "selected=selected" if @event.event_type == 6 %>><%= I18n.t("main.event_types.road") %></option>
+    <option value="5" <%= "selected=selected" if @event.event_type == 5 %>><%= I18n.t("main.event_types.mtb") %></option>
+    <option value="0" <%= "selected=selected" if @event.event_type == 0 %>><%= I18n.t("main.event_types.bmx") %></option>
+    <option value="1" <%= "selected=selected" if @event.event_type == 1 %>><%= I18n.t("main.event_types.ciclocross") %></option>
+  </select>
+</div>
+
+<div class="form-group">
+  <label for="event_allow_comments">
+    <input type="hidden" name="event[allow_comments]" value="false" />
+    <input type="checkbox" name="event[allow_comments]" id="event_allow_comments" value="true" <%= "checked=checked" if @event.is_commentable == "1" %>>
+    <%= I18n.t("events.fields.allow_comments") %>
+  </label>
+</div>
+
+<div class="form-group">
+  <label for="event_private">
+    <input type="hidden" name="event[private]" value="false" />
+    <input type="checkbox" name="event[private]" id="event_private" value="true" <%= "checked=checked" if @event.is_private == "1" %>>
+    <%= I18n.t("events.fields.private") %>
+  </label>
+</div>

@@ -1,0 +1,54 @@
+<%= form_for(@event, :html => {:role => "form"}) do |f| %>
+  <%= render :partial => "shared/error_messages", :locals => {:target => @event} %>
+
+  <%= f.hidden_field "latitude" %>
+  <%= f.hidden_field "longitude" %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :type %>
+    <%= f.select :type, Event.type_events, :prompt => t("events.form.select_your_type_event") %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %>
+    <%= f.text_area :description, :rows => 6, :cols => 80 %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :init_date %>
+    <%= f.text_field :init_date %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :finish_date %>
+    <%= f.text_field :finish_date %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </div>
+
+  <div id="panel">
+    <input id="address" type="textbox" value="Sydney, NSW">
+    <input type="button" value="Geocode" onclick="codeAddress()">
+  </div>
+  <div class="map" id="map" style="width:100%;height:400px;"></div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+
+  <%= content_for :scripts do %>
+    <script type="text/javascript">
+      event("map", <%= raw @marker.to_json %>, "event", true);
+    </script>
+  <% end %>
+
+<% end %>

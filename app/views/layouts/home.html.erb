@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>Voy en Bici - Red social para los amantes de las dos ruedas</title>
+        <%= stylesheet_link_tag "home", :media => "all" %>
+        <%= javascript_include_tag "application" %>
+        <%= csrf_meta_tags %>
+    </head>
+
+    <body id="home">
+        <section>
+            <%= render :partial => "comunes/carousel_home" %>
+            <%= yield %>
+
+            <footer>
+                <div class="container">
+                    <%= render :partial => "comunes/footer" %>
+                </div>
+            </footer>
+        </section>
+
+        <div id="modal" class="modal fade"></div>
+        <%= yield :scripts %>   
+    </body>
+</html>

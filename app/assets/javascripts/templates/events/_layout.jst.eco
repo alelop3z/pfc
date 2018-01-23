@@ -1,0 +1,6 @@
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="col-sm-6" id="left-column"></div>
+    <div class="col-sm-6" id="right-column"></div>
+  </div>
+</div>

@@ -1,0 +1,67 @@
+<div class="row">
+  <div class="col-lg-6">
+    <div class="form-group">
+      <label for="user_name" data-required="true"><%= I18n.t("users.fields.name") %>: </label>
+      <input type="text" name="user[name]" class="form-control" id="user_name" value="<%= @user.name %>" data-required="true" />
+    </div>
+
+    <div class="form-group">
+      <label for="user_email" data-required="true"><%= I18n.t("users.fields.email") %>: </label>
+      <input type="text" name="user[email]" class="form-control" id="user_email" value="<%= @user.email %>" data-required="true" />
+    </div>
+
+    <!--<div class="form-group">
+      <label for="user_password"><%#= I18n.t("user.fields.password") %>: </label>
+      <input type="password" name="user[password]" class="form-control" id="user_password_confirmation" value="" />
+    </div>-->
+
+    <!-- <div class="form-group">
+      <label for="user_password_confirmation"><%#= I18n.t("user.fields.password_confirmation") %>: </label>
+      <input type="password" name="user[password_confirmation]" class="form-control" id="user_password_confirmation" value="" />
+    </div> -->
+
+    <div class="form-group">
+      <label for="user_web_page"><%= I18n.t("users.fields.web_page") %>: </label>
+      <input type="text" name="user[web_page]" class="form-control" id="user_name" value="<%= @user.web_page %>" />
+    </div>
+
+    <div class="form-group">
+      <label for="user_about_me"><%= I18n.t("users.fields.about_me") %>: </label>
+      <textarea name="user[about_me]" class="form-control" id="user_about_me" rows="6"><%= @user.about_me %></textarea>
+    </div>
+  </div>
+
+  <div class="col-lg-5 col-lg-offset-1">
+    <div class="form-group user-image">
+      <label for="user_avatar"><%= I18n.t("users.fields.image") %>: </label>
+      <image src="<%= @user.photo %>" />
+      <input id="user_avatar" type="file" name="user[avatar]" data-url="/users/<%= @user.id_to_s %>/update_user" style="display:none;" />
+
+      <div id="progress" class="hidden">
+        <div class="bar" style="width: 0%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(function () {
+    $('#user_avatar').fileupload({
+      dataType: 'json',
+      done: function (e, data) {
+        $.getJSON("/users/user.json", function(data){
+          $(".user-image").removeClass("uploading");
+          $(".user-image IMG").attr("src", data.user.photo);
+          $("#progress .bar").css("width", 0);
+          $("#progress").addClass("hidden");
+          });
+        },
+      progressall: function (e, data) {
+        $(".user-image").addClass("uploading");
+        $("#progress").removeClass("hidden");
+        var progress = parseInt(data.loaded / data.total * 100, 10);
+        $('#progress .bar').css('width',progress + '%');
+        }
+      });
+    });
+</script>

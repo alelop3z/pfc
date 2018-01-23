@@ -1,0 +1,28 @@
+<h4 class="page-header">Configuración</h4>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        Gestión de configuraciones
+    </div>
+    <div class="panel-body">
+        <table class="table table-condensed">
+            <tr>
+                <th><%= Config.human_attribute_name(:key) %></th>
+                <th><%= Config.human_attribute_name(:value) %></th>
+                <th class="options"><%= t("main.options") %></th>
+            </tr>
+
+            <% @configs.each do |configuration| %>
+                <tr id="configuration_<%= configuration._id %>">
+                    <%= render partial: "admin/configurations/configuration", locals: {configuration: configuration} %>
+                </tr>
+            <% end %>
+        </table>
+
+        <%= paginate @configs %>
+    </div>
+
+    <div class="panel-footer">
+        <%= link_to "Nueva configuración", new_admin_configuration_path, class: 'btn btn-sm btn-success', title: "Nueva configuración" %>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<header class="navbar navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+    <div class="navbar-header hidden-xs">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse hidden-xs" role="navigation">
+      <ul class="nav navbar-nav navbar-left">
+        <%= render :partial => "menu/search" %>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <%= render :partial => "menu/links_principal" %>
+        <%= render :partial => "menu/own_menu" %>
+      </ul>
+    </nav>
+    
+    <div class="center">
+      <%= link_to image_tag("comunes/voy-en-bici.png", :alt => t("menu.voy_en_bici"), :title => t("menu.voy_en_bici")), root_path, :alt => t("menu.voy_en_bici"), :title => t("menu.voy_en_bici") %>
+    </div>
+  </div>
+</header>

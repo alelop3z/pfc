@@ -1,0 +1,8 @@
+<footer id="footer-menu-mobile" class="visible-xs">
+  <%= link_to raw(t("menu.search")), search_users_path, :title => t("menu.go_to.search"), :data => {"link-to" => "users#search"} %>
+  <%= link_to raw(t("menu.my_friends")), wall_user_path(current_user), :title => t("menu.go_to.my_friends"), :data => {"id" => current_user.id_to_s, "link-to" => "users#wall"} %>
+  <%= link_to raw(t("menu.conversations")), inbox_user_path(current_user), :title => t("menu.go_to.messages"), :data => {"id" => current_user.id_to_s, "link-to" => "users#inbox"} %>
+  <%= link_to raw(t("menu.routes")), routes_path, :title => t("menu.go_to.routes"), :data => {"link-to" => "routes#index"} %>
+  <%= link_to raw(t("menu.events")), events_path, :title => t("menu.go_to.events"), :data => {"link-to" => "events#index"} %>
+  <%= link_to raw(t("menu.logout_mobi")), destroy_user_session_path, :method => :delete, :title => t("menu.go_to.logout") %>
+</footer>

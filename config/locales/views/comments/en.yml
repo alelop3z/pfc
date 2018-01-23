@@ -1,0 +1,34 @@
+en:
+  comments:
+    answer: Reply
+    answer_comment: Reply to comment
+    close: Close
+    close_comment: Close comment
+    destroy:
+      are_you_sure?: Are you sure to remove this comment?
+      button: Destroy
+      explication: It will proceed to delete the selected comment system. Note that you can not retrieve the information associated with the comment.
+      explication_error: There was an error when deleting the selected comment. Please try again or contact the service.
+      title: Remove comment
+    insert_your_comment: Write a comment
+    mark_as_offensive:
+      close_button: Close
+      explication_ko: There has been a problem when dialing the comment selected as an offensive comment. If problems persist please contact our team at <a href="mailto:support@voyenbici.com">support@voyenbici.com</a>
+      explication_ok: Our management team has already received your notice calling the selected comment as offensive. Thank you for your contribution.
+      title: Mark as offensive
+    open: Open
+    open_comment: Open comment
+    publish_it: Publish
+    send_by_mail: Send by email
+    send_by_mail_comment: Send comment by email
+    text: 
+      length: <p>The comment can not exceed 256 characters</p>
+      presence: <p>The comment can't be blank</p>
+    types:
+      album: album
+      comment: comment
+      event: event
+      route: route
+    want_to_make_a_comment?: Want to make a comment?
+    write_your_message: Write your message
+    write_your_message_to: Write your message to %{name}

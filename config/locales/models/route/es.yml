@@ -1,0 +1,15 @@
+es:
+  mongoid:
+    models:
+      route: ruta
+    attributes:
+      route:
+        allow_comments: Permitir comentarios
+        created_at: Fecha de creación
+        description: Descripción
+        difficulty: Dificultad
+        gpx_file: Fichero
+        name: Nombre
+        private: Ruta privada
+        ready: Visible
+        type: Tipo de ruta
